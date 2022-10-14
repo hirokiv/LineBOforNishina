@@ -180,10 +180,17 @@ class LineSafetyMixin:
         s_lcb, s_ucb = self.get_joined_constrained_cb(X_eval_embedded)
         s_lcb, s_ucb = s_lcb[:, 0], s_ucb[:, 0]
 
+        # reshape to match with X_eval
+        s_lcb, s_ucb = s_lcb.reshape(X_eval.shape), s_ucb.reshape(X_eval.shape)
+        # lcb, ucb = lcb.reshape(X_eval.shape), ucb.reshape(X_eval.shape)
+        # print(X_eval.shape)
+        # print(ucb.shape)
+  
         # take minimum lcb, ucb over all safety models
         if np.sum(mask_l) == 0:
             boundary_l = optimistic_boundary_l = self._line_domain.c
         else:
+
             boundary_l, optimistic_boundary_l = self._compute_boundary_helper(
             zip(X_eval[mask_l][::-1], s_lcb[mask_l][::-1], s_ucb[mask_l][::-1]))
         if np.sum(mask_r) == 0:
@@ -198,24 +205,51 @@ class LineSafetyMixin:
 
         boundary_region_l_mask = np.logical_and(X_eval <= boundary_l, X_eval >= optimistic_boundary_l)
         boundary_region_r_mask = np.logical_and(X_eval >= boundary_r, X_eval <= optimistic_boundary_r)
+        # print(boundary_region_l_mask.shape)
+        # print(boundary_region_r_mask.shape)
+        # print(ucb[:, 0].reshape(X_eval.shape)[boundary_region_l_mask])
 
         # compute discard region
-        discard_left = np.sum(boundary_region_l_mask) > 0 and max_lcb > np.max(ucb[:, 0][boundary_region_l_mask])
+        #discard_left = np.sum(boundary_region_l_mask) > 0 and max_lcb > np.max(ucb[:, 0][boundary_region_l_mask])
+        discard_left = np.sum(boundary_region_l_mask) > 0 and max_lcb > np.max(ucb[:, 0].reshape(X_eval.shape)[boundary_region_l_mask])
+        # print("mask_discard original")
+        # print(mask_discard.shape)
+
         if discard_left:
-            mask_discard = np.logical_and(mask_discard, X_eval > optimistic_boundary_l)
+            mask_discard = np.logical_and(mask_discard, (X_eval > optimistic_boundary_l).flatten())
 
-        discard_right = np.sum(boundary_region_r_mask) > 0 and max_lcb > np.max(ucb[:, 0][boundary_region_r_mask])
+        #discard_right = np.sum(boundary_region_r_mask) > 0 and max_lcb > np.max(ucb[:, 0][boundary_region_r_mask])
+        discard_right = np.sum(boundary_region_r_mask) > 0 and max_lcb > np.max(ucb[:, 0].reshape(X_eval.shape)[boundary_region_r_mask])
         if discard_right:
-            mask_discard = np.logical_and(mask_discard, X_eval < optimistic_boundary_r)
+            mask_discard = np.logical_and(mask_discard, (X_eval < optimistic_boundary_r).flatten())
 
+
+        # print("mask_discard logic")
+        # print((X_eval < optimistic_boundary_r).flatten())
+        # print((X_eval < optimistic_boundary_l).flatten())
+
+        # print("mask_discard updated")
+        # print(mask_discard.shape)
         # compute safe region
-        mask_safe = np.logical_and(X_eval >= boundary_l, X_eval <= boundary_r)
+        # print(X_eval >= boundary_l)
+        # print(X_eval <= boundary_r)
+        mask_safe = np.logical_and(X_eval >= boundary_l, X_eval <= boundary_r).flatten()
+        # print(mask_safe)
+        # print("mask_safe.shape")
+        # print(mask_safe.shape)
+        # print(mask_discard.shape)
+        # print(mask_safe.shape)
+        # mask_safe = mask_safe.reshape(mask_discard.shape)
         mask_safe = np.logical_and(mask_safe, mask_discard)
 
         # save some info for plotting
         self._line_X_eval = X_eval
         self._line_X_eval_embedded = X_eval_embedded
+        # print("X_eval_embedded shape?")
+        # print(X_eval_embedded.shape)
         self._line_mask_safe = mask_safe
+        # print("line_mask_safe' shape?")
+        # print(mask_safe.shape)
         self._line_boundary_l = boundary_l
         self._line_boundary_r = boundary_r
         self._line_optimistic_boundary_l = optimistic_boundary_l
@@ -227,6 +261,8 @@ class LineSafetyMixin:
         if (~self._line_mask_safe).all():
             return self._line_domain.x0
 
+        # print(self._line_X_eval_embedded.shape)
+        # print(self._line_mask_safe.shape)
         return maximize(self.model.mean, self._line_X_eval_embedded, self._line_mask_safe)[0]
 
     def _line_solver_step(self):

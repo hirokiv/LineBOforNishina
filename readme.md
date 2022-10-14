@@ -1,3 +1,8 @@
+# LineBOforNishinaExperiment
+
+
+The repository is based on 
+
 This repository contains the code used for the experiments of the ICML 2019 Paper
 "Adaptive and Safe Bayesian Optimization in High Dimensions via One-Dimensional Subspaces"
 
@@ -28,4 +33,3 @@ Instructions to run experiments and create plots:
 2. febo run {experiment_name}
                 (this will take a while, you can set the number of repetitions in the yaml file)
 3. febo plot {experiment_name} --plots febo.plots.InferenceRegret
-# LineBOforNishina

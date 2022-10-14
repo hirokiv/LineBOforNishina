@@ -16,13 +16,18 @@ def minimize(f, X, mask=None, both=False):
     :return:
     """
     if not both and not mask is None:
-        X = X[mask]
+        # X = X[mask]
+        X = X[mask.flatten(), :]
+        # print("utils.minimize")
+        # print("X.shape")
+        # print(X.shape)
 
     res = f(X)
     index = np.argmin(res)
 
     if both:
-        X_masked = X[mask]
+        # X_masked = X[mask]
+        X_masked = X[mask.flatten(),:]
         res_masked = res[mask]
         index_masked = np.argmin(res_masked)
         return X[index], res[index], X_masked[index_masked], res_masked[index_masked]

@@ -1,2 +1,0 @@
-experiment.simple:
-  algorithm: febo.algorithms.spsa.SPSA

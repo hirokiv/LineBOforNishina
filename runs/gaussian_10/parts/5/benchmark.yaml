@@ -1,8 +1,0 @@
-experiment.simple:
-  algorithm: febo.algorithms.UCB
-models.gp:
-  kernels:
-  - - GPy.kern.RBF
-    - variance: 1.0
-      lengthscale: 0.2
-      ARD: false

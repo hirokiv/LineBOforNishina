@@ -41,7 +41,7 @@ algorithm.safeopt:
 controller:
   best_predicted_every: 1
   T: 500 # Horizon
-  repetitions: 10
+  repetitions: 2
 
 
 environment.benchmark:
