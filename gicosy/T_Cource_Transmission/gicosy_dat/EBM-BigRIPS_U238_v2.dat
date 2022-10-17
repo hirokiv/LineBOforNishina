@@ -1,0 +1,409 @@
+S N SRCBigRIPS;
+ENERGY = 82111.380000; 
+MASS   = 238.004000;
+CHARGE = 86.000000;
+;  Brho = 1.38496 ;
+;
+R P ENERGY MASS CHARGE ;
+O C N M L N ;  momentum
+;O C N E L N ;  Energy
+S F SRCBigRIPS E; define the output file for MOCADI
+P A B E ; command to make the .MAT file for MOCADI also check calculation orders (C O and O O) are set at 3 or 5
+C O 3;calc order
+O O 3;
+F T I; 
+;
+;----
+; for T1
+;------------Global-system-values--
+; primary beam
+;
+xx    =  0.250000e-6;
+aa    =  0.250000e-6;
+CorrH = 0.000000;
+yy    =  1.000000e-6;
+bb    =  0.250000e-6;
+CorrV = 0.000000;
+xa    = CorrH * sqrt(xx * aa);
+yb    = CorrV * sqrt(yy * bb);
+EpsilonX = sqrt(xx * aa * (1. - CorrH^2));
+EpsilonY = sqrt(yy * bb * (1. - CorrV^2));
+xxfp   =  EpsilonX^2/ aa;
+yyfp   =  EpsilonY^2/ bb;
+IX         = SQRT(xxfp);
+IA         = SQRT(aa);
+IY         = SQRT(yyfp);
+IB         = SQRT(bb);
+IP         = 0.001000;
+Fmode = 1; 1 -> GIOSFF 2 -> GICOSYFF
+;----------------------------------
+;
+;---------------Beam Definitions--
+PHASE_SPACE X IX IA ;
+PHASE_SPACE Y IY IB ;
+Deviation Param 0 IP  ;
+pp  = IP^2;
+;
+System Start;
+;
+;
+;***********************************************************
+; paste below magnet values to be calculated from the listed values above
+;***********************************************************
+;
+; first define XXXXbk and then copy to XXX
+; otherwise strange behaviour with fitting ??
+; do not fit for BXXX"bk" but only those without bk
+;
+;-------------------------------------------------------------------------
+; Bvalues
+  BQUT1 = -0.358757 ; 
+  BQMT1 = -0.008505 ; 
+  BQDT1 = 0.180925 ; 
+  BQET1 = 0.265975 ; 
+  BQUT2 = 0.000000 ; 
+  BQMT2 = -0.001365 ; 
+  BQDT2 = 0.044999 ; 
+  BQUT3 = 0.364943 ; 
+  BQDT3 = -0.428344 ; 
+;
+  BQUT4 = -0.439168 ;
+  BQDT4 = 0.340201 ;
+  BQUT5 = -0.296903 ;
+  BQMT5 = 0.539682 ;
+  BQDT5 = -0.255151 ;
+  BQUT6 = 0.740710 ;
+  BQMT6 = -0.615454 ;
+  BQDT6 = 0.511848 ;
+;
+;====================================
+;Fit Parameter
+FshiftT11=0.0;
+FshiftF0h =-0.0;
+FshiftF0v = 0.0;
+;====================================
+;
+;
+D H E (X,A) 1000 0.01 0.01 1 10;phase spase plot start point XA
+D H E (Y,B) 1000 0.01 0.01 1 10;phase spase plot start point YB
+Goto Subroutine InitialPhase;
+D H E (X,A) 1000 0.01 0.01 1 10;phase spase plot start point XA
+D H E (Y,B) 1000 0.01 0.01 1 10;phase spase plot start point YB 
+;F B BQUT3 BQDT3 BQUT4 BQDT4 BQUT5 BQMT5;
+;F B BQUT1 BQMT1 BQDT1 BQET1;
+;F B BQUT1 BQMT1 BQDT1 BQET1;
+;F B BQUT1 BQMT1 BQUT2 BQMT2 BQDT2;
+;F B BQUT3 BQDT3 ;
+;F B BQUT3 BQDT3 BQUT4 BQDT4;
+;F B  BQUT4 BQDT4 BQUT5 BQMT5 BQDT5 BQUT6 BQMT6 BQDT6;
+F B   BQUT6 BQMT6 BQDT6;
+F D;
+;
+OBJF0=0;
+OBJT11=0;
+;--- SRC-BTline ---
+Goto Subroutine SRCMAT;
+;Goto Subroutine SRCMATsuzuki;
+Goto Subroutine SRCT11;
+Goto Subroutine T11F0;
+;OBJ=OBJT11;
+OBJ=OBJF0;
+P S OBJ;
+F V OBJ;
+F E 1E-8 1000 1 ;
+D H E (X,A) 1000 0.01 0.01 1 10;phase spase plot start point XA
+D H E (Y,B) 1000 0.01 0.01 1 10;phase spase plot start point YB
+;
+;--------------
+;
+;                        x a g d y b n;
+D B   .05   .05   1000  3 5 1 3 3 5 1;
+;
+D E 0.15 0.03  400  (sqrt([X,X]^2*xxfp+[X,A]^2*aa+[X,D]^2*pp)*2.) ;
+D E 0.15 0.03  400  (sqrt([Y,Y]^2*yyfp+[Y,B]^2*bb+[Y,D]^2*pp)*2.) ;
+D E 0.2 10 100 ([X,D]) ; dispersion
+;
+D S   .2   2   100    3 3 1 1 1 1;
+;D F   .2 1.0 2.2;
+;
+Goto Subroutine PrintMatirxAll;
+End Execution;
+;
+;**********************************************************************
+;**********************************************************************
+;**********************************************************************
+;**********************************************************************
+;**********************************************************************
+;
+;
+;
+SRCMAT: ;---------------------------subroutine
+;
+;---SRC MAP (EBM2EDC)---
+[X,X]= -1.001180 ;
+[A,X]=  0.296594 ;
+[X,A]= -3.353100 + [X,X] * [X,A];
+[A,A]= -0.005500 + [A,X] * [X,A];
+;[X,D]=  2.541872 ; caution! this value is (x|delta) here, delta = deltaK/K, not deltaP/P
+[X,D]=  2.522581 ; caution! this value is (x|delta) here, delta = deltaK/K, not deltaP/P
+;[A,D]= -0.8968331; caution! this value is (a|delta) here, delta = deltaK/K, not deltaP/P
+[A,D]= -0.8900272 ; caution! this value is (a|delta) here, delta = deltaK/K, not deltaP/P
+[Y,Y]= -1.033410 ;
+[B,Y]= -0.0922010;
+[Y,B]= -1.752100 + [Y,Y] * [Y,B];
+[B,B]= -1.124000 + [B,Y] * [Y,B];
+P F '---  SRC matrix EBM2EDC set  ---' ;
+P M;;--------------------------SRCout
+Return Subroutine;-----------------------------SRCMAT
+;
+SRCMATsuzuki: ;---------------------------subroutine
+;
+;---SRC MAP (EBM2EDC)---
+[X,X]= -1.001180 ;
+[A,X]=  0.296594 ;
+[X,A]= -3.353100 ;
+[A,A]= -0.005500 ;
+;[X,D]=  2.541872 ; caution! this value is (x|delta) here, delta = deltaK/K, not deltaP/P
+[X,D]=  2.522581 ; caution! this value is (x|delta) here, delta = deltaK/K, not deltaP/P
+;[A,D]= -0.8968331; caution! this value is (a|delta) here, delta = deltaK/K, not deltaP/P
+[A,D]= -0.8900272 ; caution! this value is (a|delta) here, delta = deltaK/K, not deltaP/P
+[Y,Y]= -1.7606;
+[B,Y]= -0.3225;
+[Y,B]= -7.3300 ;
+[B,B]= -1.972;
+P F '---  SRC matrix EBM2EDC set  ---' ;
+P M;;--------------------------SRCout
+Return Subroutine;-----------------------------SRCMAT
+InitialPhase: ;---------------------------subroutine
+;
+;---Initial phase matrix ---
+[X,X]=  1.00 ;
+[A,X]=  0.00 ;
+[X,A]=  xa/aa ;focus tuning H
+[A,A]=  1.00 ;
+[X,D]=  0.00 ;
+[A,D]=  0.00 ;
+[Y,Y]=  1.00 ;
+[B,Y]=  0.00 ;
+[Y,B]=  yb/bb ;focus tuning V
+[B,B]=  1.00 ;
+P F '---  Initial phase matrix  ---' ;
+P M;
+Return Subroutine;-----------------------------InitialPhase
+;
+;=======================================================
+;
+SRCT11: ;---------------------------subroutine
+;
+;F B BQUT3 BQDT3 ;
+;F B BQMT2 BQDT2;
+;F B BQUT2 BQMT2 BQDT2;
+;F B BQUT2 BQDT2;
+;F D;
+;
+D L 1.945 ;    LineG00
+A S P 0.035 0.035; PFG00 Profile Monitor
+D L 0.055 ;    LineG00
+;
+;
+D L 0.6 ;    LineG01
+F F 1 ;
+M Q 0.45 BQUT1 0.031 ;
+F F 1 ;
+D L 0.20;
+F F 1 ;
+M Q 0.45 BQMT1 0.031 ;
+F F 1 ;
+D L 0.20;
+F F 1 ;
+M Q 0.45 BQDT1 0.031 ;
+F F 1 ;
+D L 0.20;
+F F 1 ;
+M Q 0.45 BQET1 0.031 ;
+F F 1 ;
+D L 0.6055;
+A S P 0.035 0.035; PFG01 Profile Monitor
+D L 0.1945;
+;
+D L 0.356 ;   LineT02
+D L 2.0 ;  
+D L 1.376 ;
+F F 1 ;
+M Q 0.45 BQUT2 0.031 ;
+F F 1 ;
+D L 0.30;
+F F 1 ;
+M Q 0.45 BQMT2 0.031 ;
+F F 1 ;
+D L 0.30;
+F F 1 ;
+M Q 0.45 BQDT2 0.031 ;
+F F 1 ;
+D L 0.6795 ;
+A S P 0.035 0.035; PFT02 Profile Monitor
+D L 0.0705 ;
+; ;
+D L 0.75;   LineT1
+M S -5. 20. .025;
+D L 0.7;
+F F 1 ;
+M Q 0.45 BQUT3 0.031 ;
+F F 1 ;
+D L 0.30 ;
+F F 1 ;
+M Q 0.45 BQDT3 0.031 ;
+; F F 1 ;
+; D L 1.645 ;
+; D L 0.27 ;
+; ; ;
+; D L 1.03 ;   LineT11
+; D L 1.567 ;
+D L 3.5375;
+A S P 0.035 0.035; PFT11a Profile Monitor
+D L 0.850;  to T11 target 2018 Apr. by nishi
+D L FshiftT11;
+;
+ACHR =([X,D])^2 *9999 +([A,D])^2 *9999;
+XYWST= (TXA$-0.0)^2*999 + (TYA$-0.0)^2*999 ;
+XWYF  = (TXA$-0.0)^2*999 + ([Y,B])^2*999 ;
+OBJQmax =           (ABS(BQUT1)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQMT1)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQDT1)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQET1)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQUT2)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQMT2)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQDT2)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+;
+;OBJT11 = ACHR + OBJQmax;
+OBJT11 = XYWST + OBJQmax;
+;F V XYWST;
+;F V XWYF;
+;F V ACHR;
+;F E 1E-20 1000 6;
+P F '---  T11 point  ---' ;
+P M;--------------------------T11
+;
+D L (- 1.0 * FshiftT11);
+Return Subroutine;-----------------------------SRCT11
+;
+;
+;**********************************************************************
+;**********************************************************************
+;
+;
+T11F0: ;---------------------------subroutine
+;F B BQUT5 BQDT5 BQUT6 BQMT6;
+;F D;
+D L 0.1530;
+A S P 0.035 0.035; PFT11b Profile Monitor
+D L 3.5745; from PF, LineT12 2018 Apr. by nishi
+F F 1 ;
+M Q 0.45 BQUT4 0.031 ;
+F F 1 ;
+D L 0.30 ;
+F F 1 ;
+M Q 0.45 BQDT4 0.031 ;
+F F 1 ;
+D L 0.243 ;
+;
+D L 0.0005;
+A S P 0.035 0.035;  PFT12a Profile Monitor
+D L 0.9815; from PF; LineT20
+;
+F F 1 0 ;
+M S -4.02 50. .025;
+F F 1 0 ;
+D L 0.782 ;
+;
+D L 0.0005;
+A S P 0.035 0.035;  PFT20 Profile Monitor
+D L 0.2775; from PF; LineT21
+F F 1 ;
+M Q 0.25 BQUT5 0.031 ;
+F F 1 ;
+D L 0.20 ;
+F F 1 ;
+M Q 0.45 BQMT5 0.031 ; 
+;M Q 0.45 BQMT5 0.060 ; 
+F F 1 ;
+D L 0.20 ;
+F F 1 ;
+M Q 0.25 BQDT5 0.031 ; 
+F F 1 ;
+D L 0.412 ;
+D L 0.0005;
+A S P 0.035 0.035;  PFT21 Profile Monitor
+; 
+D L 0.7115; from PF;  LineBTGT
+F F 1 0 ;
+M S -4.02 50. .025 ;
+F F 1 0 ;
+D L 0.876 ;
+F F 1 ;
+M Q 0.45 BQUT6 0.05 ;
+F F 1 ;
+D L 0.25 ;     
+F F 1 ;
+M Q 0.85 BQMT6 0.05 ;
+F F 1 ;
+D L 0.25 ;     
+F F 1 ;
+M Q 0.45 BQDT6 0.05 ;
+F F 1 ;
+D L 0.357;
+A S P 0.035 0.035; PFF0G Profile Monitor
+D L 0.065;
+;
+D L 0.955;LineT2 to PF
+A S P 0.035 0.035; PFF0 Profile Monitor
+D L 0.345;LineT2; from PF
+;
+;D L FshiftF0h;
+XYWST= (TXA$-0.0)^2*999;
+;D L FshiftF0v;
+XYWST= XYWST + (TYA$-0.0)^2*999;
+F0XD = 3.45;
+OBJ21 = ABS([X,A])^2 + ABS([Y,B])^2 + ABS([A,X])^2 + ABS([B,Y])^2;
+OBJ22 = ABS([X,D] -F0XD)^2 + ABS([A,D])^2;
+;XYWST= (TXA$-0.0)^2*999 + (TYA$-0.0)^2*999 ;
+OBJF0 = XYWST;
+;OBJF0 = OBJ21*9999 + OBJ22*9999;
+;
+; F V OBJF0;
+; F E 1E-8 1000 1 ;
+ P F '---  F0 point  ---' ;
+;
+;
+P M;--------------------------F0
+;D L (-1.0*FshiftF0v);
+;D L (-1.0*FshiftF0h);
+;
+Return Subroutine;-----------------------------T11F0
+;
+;**********************************************************************
+;
+;
+;
+PrintMatirxAll: ;----------subroutine
+P S 'ME11  = ' [X,X] ';';
+P S 'ME12  = ' [X,A] ';';
+P S 'ME21  = ' [A,X] ';';
+P S 'ME22  = ' [A,A] ';';
+P S 'ME33  = ' [Y,Y] ';';
+P S 'ME34  = ' [Y,B] ';';
+P S 'ME43  = ' [B,Y] ';';
+P S 'ME44  = ' [B,B] ';';
+P S 'ME16  = ' [X,D] ';';
+P S 'ME26  = ' [A,D] ';';
+P S 'ME36  = ' [Y,D] ';';
+P S 'ME46  = ' [B,D] ';';
+Return Subroutine;-----------------------------PrintMatirxAll
+;
+;**********************************************************************
+;**********************************************************************
+;
+;
+END ;
+;
+;

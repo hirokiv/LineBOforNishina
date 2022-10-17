@@ -1,0 +1,33 @@
+ ************** GICOSY VERSION 2.7 (24-Apr-16), UNI GIESSEN, GSI **************
+ Reading input
+ Analysing input
+  ###     INFO:  FIT IS DISABLED                                  
+           0  WARNINGS IN INPUT
+           0  ERRORS IN INPUT
+  1.172945041E+05
+ ME11  = -1.747494026E-01;
+ ME12  =  7.815955874E-01;
+ ME21  = -6.759810307E-01;
+ ME22  = -9.757117513E+00;
+ ME33  = -4.978288587E-01;
+ ME34  =  3.203977358E-01;
+ ME43  = -5.737841832E+00;
+ ME44  =  1.863749138E+00;
+ ME16  = -4.433605807E-02;
+ ME26  = -1.238645041E-01;
+ ME36  =  0.000000000E+00;
+ ME46  =  0.000000000E+00;
+
+           0  WARNINGS IN EXECUTION
+           0  ERRORS IN EXECUTION
+
+
+  Graphic plot of system
+
+  Graphic plot of beam
+
+  Graphic plot of expression
+
+
+ ************************    E N D   O F   G I C O S Y    *********************
+*** Transform GICOSY Meta File to Postscript

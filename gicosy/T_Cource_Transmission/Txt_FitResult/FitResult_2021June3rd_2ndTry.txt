@@ -1,0 +1,17 @@
+Optimization terminated successfully.
+    fun: 26.485338
+message: Optimization terminated successfully.
+   nfev: 870
+    nit: 4
+ status: 0
+success: True
+
+BQ = [
+-0.139586,#BQTa
++0.238785,#BQTb
+-0.278402,#BQTc
++0.194697,#BQS1
+-0.174503,#BQS2
++0.238721,#BQDa
+-0.227100 #BQDb
+]

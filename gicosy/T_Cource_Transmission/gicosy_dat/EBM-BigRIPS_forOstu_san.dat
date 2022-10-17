@@ -1,0 +1,503 @@
+S N SRC-BigRIPS;
+Reference Particle  4138.80 17.99477  8 ;  18O  5.205748Tm reference Brho for calculation. 
+;P A B E ;  for MOCADI also check calculation orders (C O and O O) are set at 3 or 5
+S F SRCBRIPSPIA E;
+O C N M L N ;  
+C O 3;
+O O 3;
+Calc Mode 1; changed on 2018Jan25
+F T O; changed on 2018Jan25
+;
+;----
+; for T11
+IX = .001; +-Object X-size   [m]
+IA = .003 ; +-Object A-angle
+IY = .001 ; +-Object Y-size   [m]
+IB = .0030  ; +-Object B-angle
+IP = .001   ; +-Momentum Acceptance
+F0XA = 0.0;
+F0YB = 0.0;
+F0XD=0.0;
+;F0XD=-1.0;
+F0AD=0.0;
+;----------------------------------
+;
+;---------------Beam Definitions--
+PHASE_SPACE X IX IA ;
+PHASE_SPACE Y IY IB ;
+Deviation Param 0 IP  ;
+;
+System Start;
+;
+;
+;***********************************************************
+; paste below magnet values to be calculated from the listed values above
+;***********************************************************
+;
+; first define XXXXbk and then copy to XXX
+; otherwise strange behaviour with fitting ??
+; do not fit for BXXX"bk" but only those without bk
+;
+;-------------------------------------------------------------------------
+; SRC-T11 achromatic mode with assumed SRCmatrix
+; This corresponds to 2018MS-run593 (need confirmation by A.Sakaue)
+; 2018Logbook p14 mode called SRC-T11-Achr1  mode.
+; polarity of QMT2 is flipped from default (D -> F)
+  BQUT1 = -0.23198; 0.031
+  BQMT1 = -0.0055; 0.031
+  BQDT1 =  0.11717; 0.031
+  BQET1 =  0.17176; 0.031
+  BQUT2 = -0.03199; 0.031
+  BQMT2 =  0.04987; 0.031
+  BQDT2 =  0.00667; 0.031
+  BQUT3 =  0.23645; 0.031
+  BQDT3 = -0.27679; 0.031
+ ; w/o polarity flip fit in 2021 Oct. by Nishi
+  BQUT1 = -2.319800000E-01; 0.031
+  BQMT1 = -5.500000000E-03; 0.031
+  BQDT1 =  1.171700000E-01; 0.031
+  BQET1 =  1.717600000E-01; 0.031
+  BQUT2 = -0.0; 0.031
+  BQMT2 = -8.827469727E-04; 0.031
+  BQDT2 =  2.905849218E-02; 0.031
+  BQUT3 =  2.364500000E-01; 0.031
+  BQDT3 = -2.767900000E-01; 0.031
+;
+;==============================================
+;  Mode T11 to F0
+;
+;-----T11-F0 achromatic mode from 2018MS----
+BQUT4 = -2.837204081E-01;
+BQDT4 =  2.197676448E-01;
+BQUT5 = -1.924711637E-01;
+BQMT5 =  3.489952444E-01;
+BQDT5 = -1.652884460E-01;
+BQUT6 =  4.786269090E-01;;
+BQMT6 = -3.980997018E-01;
+BQDT6 =  3.309547375E-01;
+;
+BQUT1init = BQUT1; 
+BQMT1init = BQMT1; 
+BQDT1init = BQDT1; 
+BQET1init = BQET1; 
+BQUT2init = BQUT2; 
+BQMT2init = BQMT2; 
+BQDT2init = BQDT2; 
+BQUT3init = BQUT3; 
+BQDT3init = BQDT3;
+BQUT4init = BQUT4;
+BQDT4init = BQDT4;
+BQUT5init = BQUT5;
+BQMT5init = BQMT5;
+BQDT5init = BQDT5;
+BQUT6init = BQUT6;
+BQMT6init = BQMT6;
+BQDT6init = BQDT6;
+;
+; BQUT1init = -2.319800000E-01; 0.031
+; BQMT1init = -5.500000000E-03; 0.031
+; BQDT1init =  1.171700000E-01; 0.031
+; BQET1init =  1.717600000E-01; 0.031
+; BQUT2init = -0.0; 0.031
+; BQMT2init = -8.827469727E-04; 0.031
+; BQDT2init =  2.905849218E-02; 0.031
+; BQUT3init =  2.364500000E-01; 0.031
+; BQDT3init = -2.767900000E-01; 0.031
+; BQUT4init = -2.837204081E-01;
+; BQDT4init =  2.197676448E-01;
+; BQUT5init = -1.924711637E-01;
+; BQMT5init =  3.489952444E-01;
+; BQDT5init = -1.652884460E-01;
+; BQUT6init =  4.786269090E-01;;
+; BQMT6init = -3.980997018E-01;
+; BQDT6init =  3.309547375E-01;
+;
+;====================================
+;Fit Parameter
+FshiftT11=0.0;
+FshiftF0h =-0.1;
+FshiftF0v = 0.1;
+;====================================
+;
+;
+ D H E (X,A) 1000 0.01 0.01 1 10;phase spase plot start point XA
+ D H E (Y,B) 1000 0.01 0.01 1 10;phase spase plot start point YB
+;F B BQUT3 BQDT3 BQUT4 BQDT4 BQUT5 BQMT5;
+;F B BQUT1 BQMT1 BQDT1 BQET1;
+;F B BQUT1 BQMT1 BQDT1 BQET1;
+;F B BQUT1 BQMT1 BQUT2 BQMT2 BQDT2;
+;F B BQUT3 BQDT3 ;
+;F B BQUT3 BQDT3 BQUT4 BQDT4;
+;F B  BQUT4 BQDT4 BQUT5 BQMT5 BQDT5 BQUT6 BQMT6 BQDT6;
+F B   BQUT6 BQMT6 BQDT6;
+F D;
+;
+OBJF0=0;
+OBJT11=0;
+;--- SRC-BTline ---
+Goto Subroutine SRCMAT;
+;Goto Subroutine SRCMATsuzuki;
+Goto Subroutine SRCT11;
+Goto Subroutine T11F0;
+;OBJ=OBJT11;
+OBJ=OBJF0;
+P S OBJ;
+F V OBJ;
+F E 1E-8 1000 1 ;
+ D H E (X,A) 1000 0.01 0.01 1 10;phase spase plot start point XA
+ D H E (Y,B) 1000 0.01 0.01 1 10;phase spase plot start point YB
+;
+;--------------
+Goto Subroutine PrintQValue;
+Goto Subroutine PrintHValue;
+Goto Subroutine PrintFactor;
+;
+;                   x a g d y b n
+D B 0.05 0.05 1000  3 5 1 1 3 5 1 ;
+;D M 0.05 0.05 100 0 9999; (maybe this command works only with new gicosy)
+D E 0.15 0.03  400  (sqrt([X,X]^2*IX^2+[X,A]^2*IA^2+[X,D]^2*IP^2)) ; horizontal envelope
+D E 0.15 0.03  400  (sqrt([Y,Y]^2*IY^2+[Y,B]^2*IB^2)) ; vertical envelope
+D E 0.2 50 100 ([X,D]) ; dispersion
+;D E 0.2 50 100 ([A,D]) ; angler dispersion
+;D E 0.15 6.0 400 ([X,D]) ;
+;D E 0.2 300 100 (2*1.5*[X,A]^3) ; dT_xaa/dS hexapole coupling coeff
+;D E 0.2 250 100 (2*1.5*[X,A]^2*[X,D]) ; dT_xad/dS
+;D E 0.2 200 100 (2*1.5*[X,A]*[X,D]^2) ; dT_xdd/dS
+D S   .2   2   100    3 3 1 1 1 1;
+;
+Goto Subroutine PrintMatirxAll;
+End Execution;
+;
+;**********************************************************************
+;**********************************************************************
+;**********************************************************************
+;**********************************************************************
+;**********************************************************************
+;
+;
+;
+SRCMAT: ;---------------------------subroutine
+;
+;---SRC MAP (EBM2EDC)---
+[X,X]= -1.001180 ;
+[A,X]=  0.296594 ;
+[X,A]= -3.353100 ;
+[A,A]= -0.005500 ;
+;[X,D]=  2.541872 ; caution! this value is (x|delta) here, delta = deltaK/K, not deltaP/P
+[X,D]=  2.522581 ; caution! this value is (x|delta) here, delta = deltaK/K, not deltaP/P
+;[A,D]= -0.8968331; caution! this value is (a|delta) here, delta = deltaK/K, not deltaP/P
+[A,D]= -0.8900272 ; caution! this value is (a|delta) here, delta = deltaK/K, not deltaP/P
+[Y,Y]= -1.033410 ;
+[B,Y]= -0.0922010;
+[Y,B]= -1.752100 ;
+[B,B]= -1.124000 ;
+P F '---  SRC matrix EBM2EDC set  ---' ;
+P M;;--------------------------SRCout
+Return Subroutine;-----------------------------SRCMAT
+;
+SRCMATsuzuki: ;---------------------------subroutine
+;
+;---SRC MAP (EBM2EDC)---
+[X,X]= -1.001180 ;
+[A,X]=  0.296594 ;
+[X,A]= -3.353100 ;
+[A,A]= -0.005500 ;
+;[X,D]=  2.541872 ; caution! this value is (x|delta) here, delta = deltaK/K, not deltaP/P
+[X,D]=  2.522581 ; caution! this value is (x|delta) here, delta = deltaK/K, not deltaP/P
+;[A,D]= -0.8968331; caution! this value is (a|delta) here, delta = deltaK/K, not deltaP/P
+[A,D]= -0.8900272 ; caution! this value is (a|delta) here, delta = deltaK/K, not deltaP/P
+[Y,Y]= -1.7606;
+[B,Y]= -0.3225;
+[Y,B]= -7.3300 ;
+[B,B]= -1.972;
+P F '---  SRC matrix EBM2EDC set  ---' ;
+P M;;--------------------------SRCout
+Return Subroutine;-----------------------------SRCMAT
+;
+;=======================================================
+;
+SRCT11: ;---------------------------subroutine
+;
+;F B BQUT3 BQDT3 ;
+;F B BQMT2 BQDT2;
+;F B BQUT2 BQMT2 BQDT2;
+;F B BQUT2 BQDT2;
+;F D;
+;
+D L 1.945 ;    LineG00
+A S P 0.035 0.035; PFG00 Profile Monitor
+D L 0.055 ;    LineG00
+;
+;
+D L 0.6 ;    LineG01
+F F 1 ;
+M Q 0.45 BQUT1 0.031 ;
+F F 1 ;
+D L 0.20;
+F F 1 ;
+M Q 0.45 BQMT1 0.031 ;
+F F 1 ;
+D L 0.20;
+F F 1 ;
+M Q 0.45 BQDT1 0.031 ;
+F F 1 ;
+D L 0.20;
+F F 1 ;
+M Q 0.45 BQET1 0.031 ;
+F F 1 ;
+D L 0.6055;
+A S P 0.035 0.035; PFG01 Profile Monitor
+D L 0.1945;
+;
+D L 0.356 ;   LineT02
+D L 2.0 ;  
+D L 1.376 ;
+F F 1 ;
+M Q 0.45 BQUT2 0.031 ;
+F F 1 ;
+D L 0.30;
+F F 1 ;
+M Q 0.45 BQMT2 0.031 ;
+F F 1 ;
+D L 0.30;
+F F 1 ;
+M Q 0.45 BQDT2 0.031 ;
+F F 1 ;
+D L 0.6795 ;
+A S P 0.035 0.035; PFT02 Profile Monitor
+D L 0.0705 ;
+; ;
+D L 0.75;   LineT1
+M S -5. 20. .025;
+D L 0.7;
+F F 1 ;
+M Q 0.45 BQUT3 0.031 ;
+F F 1 ;
+D L 0.30 ;
+F F 1 ;
+M Q 0.45 BQDT3 0.031 ;
+; F F 1 ;
+; D L 1.645 ;
+; D L 0.27 ;
+; ; ;
+; D L 1.03 ;   LineT11
+; D L 1.567 ;
+D L 3.5375;
+A S P 0.035 0.035; PFT11a Profile Monitor
+D L 0.850;  to T11 target 2018 Apr. by nishi
+D L FshiftT11;
+;
+ACHR =([X,D])^2 *9999 +([A,D])^2 *9999;
+XYWST= (TXA$-0.0)^2*999 + (TYA$-0.0)^2*999 ;
+XWYF  = (TXA$-0.0)^2*999 + ([Y,B])^2*999 ;
+OBJQmax =           (ABS(BQUT1)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQMT1)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQDT1)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQET1)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQUT2)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQMT2)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+OBJQmax = OBJQmax + (ABS(BQDT2)#MAX#(0.52) - 0.52)^2 * 1.0e+6;
+;
+;OBJT11 = ACHR + OBJQmax;
+OBJT11 = XYWST + OBJQmax;
+;F V XYWST;
+;F V XWYF;
+;F V ACHR;
+;F E 1E-20 1000 6;
+P F '---  T11 point  ---' ;
+P M;--------------------------T11
+;
+D L (- 1.0 * FshiftT11);
+Return Subroutine;-----------------------------SRCT11
+;
+;
+;**********************************************************************
+;**********************************************************************
+;
+;
+T11F0: ;---------------------------subroutine
+;F B BQUT5 BQDT5 BQUT6 BQMT6;
+;F D;
+D L 0.1530;
+A S P 0.035 0.035; PFT11b Profile Monitor
+D L 3.5745; from PF, LineT12 2018 Apr. by nishi
+F F 1 ;
+M Q 0.45 BQUT4 0.031 ;
+F F 1 ;
+D L 0.30 ;
+F F 1 ;
+M Q 0.45 BQDT4 0.031 ;
+F F 1 ;
+D L 0.243 ;
+;
+D L 0.0005;
+A S P 0.035 0.035;  PFT12a Profile Monitor
+D L 0.9815; from PF; LineT20
+;
+F F 1 0 ;
+M S -4.02 50. .025;
+F F 1 0 ;
+D L 0.782 ;
+;
+D L 0.0005;
+A S P 0.035 0.035;  PFT20 Profile Monitor
+D L 0.2775; from PF; LineT21
+F F 1 ;
+M Q 0.25 BQUT5 0.031 ;
+F F 1 ;
+D L 0.20 ;
+F F 1 ;
+M Q 0.45 BQMT5 0.031 ; 
+;M Q 0.45 BQMT5 0.060 ; 
+F F 1 ;
+D L 0.20 ;
+F F 1 ;
+M Q 0.25 BQDT5 0.031 ; 
+F F 1 ;
+D L 0.412 ;
+D L 0.0005;
+A S P 0.035 0.035;  PFT21 Profile Monitor
+; 
+D L 0.7115; from PF;  LineBTGT
+F F 1 0 ;
+M S -4.02 50. .025 ;
+F F 1 0 ;
+D L 0.876 ;
+F F 1 ;
+M Q 0.45 BQUT6 0.05 ;
+F F 1 ;
+D L 0.25 ;     
+F F 1 ;
+M Q 0.85 BQMT6 0.05 ;
+F F 1 ;
+D L 0.25 ;     
+F F 1 ;
+M Q 0.45 BQDT6 0.05 ;
+F F 1 ;
+D L 0.357;
+A S P 0.035 0.035; PFF0G Profile Monitor
+D L 0.065;
+;
+D L 0.955;LineT2 to PF
+A S P 0.035 0.035; PFF0 Profile Monitor
+D L 0.345;LineT2; from PF
+;
+D L FshiftF0h;
+XYWST= (TXA$-0.0)^2*999;
+D L FshiftF0v;
+XYWST= XYWST + (TYA$-0.0)^2*999;
+F0XD = 3.45;
+OBJ21 = ABS([X,A])^2 + ABS([Y,B])^2 + ABS([A,X])^2 + ABS([B,Y])^2;
+OBJ22 = ABS([X,D] -F0XD)^2 + ABS([A,D])^2;
+;XYWST= (TXA$-0.0)^2*999 + (TYA$-0.0)^2*999 ;
+OBJF0 = XYWST;
+;OBJF0 = OBJ21*9999 + OBJ22*9999;
+;
+; F V OBJF0;
+; F E 1E-8 1000 1 ;
+ P F '---  F0 point  ---' ;
+;
+;
+P M;--------------------------F0
+D L (-1.0*FshiftF0v);
+D L (-1.0*FshiftF0h);
+;
+Return Subroutine;-----------------------------T11F0
+;
+;**********************************************************************
+;
+PrintQValue: ;----------subroutine
+BQUT1ratio = (BQUT1 - BQUT1init)/BQUT1init*100.;
+BQMT1ratio = (BQMT1 - BQMT1init)/BQMT1init*100.;
+BQDT1ratio = (BQDT1 - BQDT1init)/BQDT1init*100.;
+BQET1ratio = (BQET1 - BQET1init)/BQET1init*100.;
+;
+BQUT2ratio = (BQUT2 - BQUT2init)/BQUT2init*100.;
+BQMT2ratio = (BQMT2 - BQMT2init)/BQMT2init*100.;
+BQDT2ratio = (BQDT2 - BQDT2init)/BQDT2init*100.;
+;
+BQUT3ratio = (BQUT3 - BQUT3init)/BQUT3init*100.;
+BQDT3ratio = (BQDT3 - BQDT3init)/BQDT3init*100.;
+;
+BQUT4ratio = (BQUT4 - BQUT4init)/BQUT4init*100.;
+BQDT4ratio = (BQDT4 - BQDT4init)/BQDT4init*100.;
+;
+BQUT5ratio = (BQUT5 - BQUT5init)/BQUT5init*100.;
+BQMT5ratio = (BQMT5 - BQMT5init)/BQMT5init*100.;
+BQDT5ratio = (BQDT5 - BQDT5init)/BQDT5init*100.;
+;
+BQUT6ratio = (BQUT6 - BQUT6init)/BQUT6init*100.;
+BQMT6ratio = (BQMT6 - BQMT6init)/BQMT6init*100.;
+BQDT6ratio = (BQDT6 - BQDT6init)/BQDT6init*100.;
+;
+P S 'BEGIN_PRINT_QVALUE';
+P S 'BQUT1 = ' BQUT1 '; 0.031 (' BQUT1ratio ')';
+P S 'BQMT1 = ' BQMT1 '; 0.031 (' BQMT1ratio ')';
+P S 'BQDT1 = ' BQDT1 '; 0.031 (' BQDT1ratio ')';
+P S 'BQET1 = ' BQET1 '; 0.031 (' BQET1ratio ')';
+P S 'BQUT2 = ' BQUT2 '; 0.031 (' BQUT2ratio ')';
+P S 'BQMT2 = ' BQMT2 '; 0.031 (' BQMT2ratio ')';
+P S 'BQDT2 = ' BQDT2 '; 0.031 (' BQDT2ratio ')';
+P S 'BQUT3 = ' BQUT3 '; 0.031 (' BQUT3ratio ')';
+P S 'BQDT3 = ' BQDT3 '; 0.031 (' BQDT3ratio ')';
+P S 'BQUT4 = ' BQUT4 '; 0.031 (' BQUT4ratio ')';
+P S 'BQDT4 = ' BQDT4 '; 0.031 (' BQDT4ratio ')';
+P S 'BQUT5 = ' BQUT5 '; 0.031 (' BQUT5ratio ')';
+P S 'BQMT5 = ' BQMT5 '; 0.031 (' BQMT5ratio ')';
+P S 'BQDT5 = ' BQDT5 '; 0.031 (' BQDT5ratio ')';
+P S 'BQUT6 = ' BQUT6 '; 0.05  (' BQUT6ratio ')';
+P S 'BQMT6 = ' BQMT6 '; 0.05  (' BQMT6ratio ')';
+P S 'BQDT6 = ' BQDT6 '; 0.05  (' BQDT6ratio ')';
+;
+P F 'BTline_QI_CONVERSION_BEGIN';
+P F 'BQUT1  ' BQUT1;
+P F 'BQMT1  ' BQMT1;
+P F 'BQDT1  ' BQDT1;
+P F 'BQET1  ' BQET1;
+P F 'BQUT2  ' BQUT2;
+P F 'BQMT2  ' BQMT2;
+P F 'BQDT2  ' BQDT2;
+P F 'BQUT3  ' BQUT3;
+P F 'BQDT3  ' BQDT3;
+P F 'BQUT4  ' BQUT4;
+P F 'BQDT4  ' BQDT4;
+P F 'BQUT5  ' BQUT5;
+P F 'BQMT5  ' BQMT5;
+P F 'BQDT5  ' BQDT5;
+P F 'BQUT6  ' BQUT6;
+P F 'BQMT6 ' BQMT6;
+P F 'BQDT6  ' BQDT6;
+P F 'BTline_QI_CONVERSION_END';
+;
+Return Subroutine;
+;
+PrintFactor: ;----------subroutine
+;
+Return Subroutine;
+;
+PrintHValue: ;----------subroutine
+;
+Return Subroutine;
+;
+PrintMatirxAll: ;----------subroutine
+P S 'ME11  = ' [X,X] ';';
+P S 'ME12  = ' [X,A] ';';
+P S 'ME21  = ' [A,X] ';';
+P S 'ME22  = ' [A,A] ';';
+P S 'ME33  = ' [Y,Y] ';';
+P S 'ME34  = ' [Y,B] ';';
+P S 'ME43  = ' [B,Y] ';';
+P S 'ME44  = ' [B,B] ';';
+P S 'ME16  = ' [X,D] ';';
+P S 'ME26  = ' [A,D] ';';
+P S 'ME36  = ' [Y,D] ';';
+P S 'ME46  = ' [B,D] ';';
+Return Subroutine;-----------------------------PrintMatirxAll
+;
+;**********************************************************************
+;**********************************************************************
+;
+;
+END ;
+;
+;

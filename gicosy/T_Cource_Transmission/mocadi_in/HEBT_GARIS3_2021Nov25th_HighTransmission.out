@@ -1,0 +1,2528 @@
+    MOCADI 4.0 (ROOT) Thu Nov 25 12:36:13 2021
+
+ 
+  **********************  beam  ************************
+
+  num of atoms=      10000         mode x,a    =          2     
+  energy      =     5.9990 MeV/A  max dx      =     0.0550  cm  
+  time        =     0.0000  s     max da      =     2.3300 mrad 
+  mass        =    50.9368        r12         =     0.0000      
+  protons     =         13        ver x       =     0.0000  cm  
+  electrons   =          0        ver a       =     0.0000 mrad 
+
+  mode y,b    =          2        mode e,t    =          2      
+  max dy      =     0.0770  cm    max de      =     0.4000  %   
+  max db      =     1.6700 mrad   max dt      =     0.0000 s    
+  r34         =     0.0000        r56         =     0.0000      
+  ver y       =     0.0000  cm    ver e       =     0.0000      
+  ver b       =     0.0000 mrad   ver t       =     0.0000 s    
+
+  ***************************************************
+  ***********  expected value  1  ******************
+  ***************************************************
+
+  
+
+
+  ********************** save   1 ********************
+
+  **********************  drift ***********************
+          length      =     0.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII000.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  ********************** save   2 ********************
+
+  **********************  drift ***********************
+          length      =    49.6000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII001.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll   1 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII002.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll   2 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll   3 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII003.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll   4 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll   5 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII004.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll   6 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll   7 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII005.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll   8 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll   9 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII006.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  10 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  11 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII007.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  12 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  13 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII008.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  14 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  15 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII009.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  16 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  17 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII010.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  18 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  19 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII011.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  20 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     3.1000 cm
+          ymax        =     3.1000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************** save   3 ********************
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII012.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    20.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII013.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  21 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII014.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+00 cm
+  *********************  coll  22 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  23 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII015.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+00 cm
+  *********************  coll  24 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  25 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII016.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+00 cm
+  *********************  coll  26 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  27 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII017.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+00 cm
+  *********************  coll  28 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  29 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII018.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+00 cm
+  *********************  coll  30 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  31 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII019.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+00 cm
+  *********************  coll  32 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  33 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII020.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+00 cm
+  *********************  coll  34 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  35 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII021.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+00 cm
+  *********************  coll  36 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  37 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII022.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+00 cm
+  *********************  coll  38 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  39 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII023.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+00 cm
+  *********************  coll  40 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     3.1000 cm
+          ymax        =     3.1000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************** save   4 ********************
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII024.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    20.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII025.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  41 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII026.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  42 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  43 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII027.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  44 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  45 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII028.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  46 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  47 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII029.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  48 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  49 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII030.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  50 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  51 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII031.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  52 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  53 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII032.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  54 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  55 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII033.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  56 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  57 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII034.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  58 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  59 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII035.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll  60 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     3.1000 cm
+          ymax        =     3.1000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************** save   5 ********************
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII036.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    21.7500 cm
+
+  **********************  drift ***********************
+          length      =     2.2500 cm
+
+  *********************  coll  61 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.4750 cm
+          ymax        =     1.4750 cm
+          sig_fac     =     0.0000 cm
+
+
+  **********************  drift ***********************
+          length      =    32.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII037.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  62 **********************
+          mode of coll=     1 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =    10.0000 cm
+          ymax        =     1.2500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII038.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.1991e+02 cm
+  *********************  coll  63 **********************
+          mode of coll=     1 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =    10.0000 cm
+          ymax        =     1.2500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************** save   6 ********************
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII039.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    32.0000 cm
+
+  *********************  coll  64 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.4750 cm
+          ymax        =     1.4750 cm
+          sig_fac     =     0.0000 cm
+
+
+  **********************  drift ***********************
+          length      =    -2.0000 cm
+
+  **********************  drift ***********************
+          length      =    20.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII040.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  65 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII041.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  66 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  67 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII042.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  68 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  69 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII043.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  70 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  71 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII044.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  72 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  73 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII045.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  74 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  75 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII046.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  76 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  77 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII047.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  78 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  79 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII048.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  80 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  81 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII049.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  82 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  83 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII050.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  84 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     3.1000 cm
+          ymax        =     3.1000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************** save   7 ********************
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII051.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    49.5500 cm
+
+  ********************** save   8 ********************
+
+  **********************  drift ***********************
+          length      =    49.5500 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII052.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  85 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII053.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  86 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  87 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII054.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  88 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  89 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII055.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  90 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  91 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII056.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  92 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  93 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII057.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  94 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  95 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII058.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  96 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  97 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII059.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll  98 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll  99 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII060.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll 100 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 101 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII061.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll 102 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 103 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII062.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.0000e+00 cm
+  *********************  coll 104 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     3.1000 cm
+          ymax        =     3.1000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************** save   9 ********************
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII063.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    11.7000 cm
+
+  **********************  drift ***********************
+          length      =    19.1500 cm
+
+  **********************  drift ***********************
+          length      =    -9.8500 cm
+
+  *********************  coll 105 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.4750 cm
+          ymax        =     1.4750 cm
+          sig_fac     =     0.0000 cm
+
+
+  **********************  drift ***********************
+          length      =    29.0000 cm
+
+  *********************  coll 106 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.4750 cm
+          ymax        =     1.4750 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 107 **********************
+          mode of coll=     1 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =    10.0000 cm
+          ymax        =     1.2500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII064.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   6.3400e+01 cm
+  *********************  coll 108 **********************
+          mode of coll=     1 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =    10.0000 cm
+          ymax        =     1.2500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 109 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.4750 cm
+          ymax        =     1.4750 cm
+          sig_fac     =     0.0000 cm
+
+
+  **********************  drift ***********************
+          length      =    58.0000 cm
+
+  *********************  coll 110 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.4750 cm
+          ymax        =     1.4750 cm
+          sig_fac     =     0.0000 cm
+
+
+  **********************  drift ***********************
+          length      =    -9.2000 cm
+
+  **********************  drift ***********************
+          length      =    19.8000 cm
+
+  **********************  drift ***********************
+          length      =    28.1000 cm
+
+  ********************** save  10 ********************
+
+  **********************  drift ***********************
+          length      =    15.6000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII065.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll 111 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII066.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 112 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 113 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII067.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 114 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 115 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII068.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 116 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 117 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII069.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 118 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 119 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII070.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 120 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 121 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII071.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 122 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 123 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII072.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 124 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 125 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII073.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 126 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 127 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII074.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 128 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 129 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII075.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 130 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     3.1000 cm
+          ymax        =     3.1000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************** save  11 ********************
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII076.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    18.8000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII077.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll 131 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII078.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 132 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 133 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII079.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 134 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 135 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII080.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 136 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 137 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII081.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 138 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 139 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII082.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 140 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 141 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII083.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 142 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 143 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII084.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 144 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 145 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII085.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 146 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 147 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII086.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 148 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  *********************  coll 149 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII087.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =         5.99900 MeV/u
+          momentum_ref=     5.39355e+03 MeV/c
+          velocity    =     3.38606e+09 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+00 cm
+  *********************  coll 150 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     3.1000 cm
+          ymax        =     3.1000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************** save  12 ********************
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/GARISIII088.MAT
+
+          mass_ref    =        50.93682      
+          charge_ref  =        13.00000      
+          energy_ref  =      

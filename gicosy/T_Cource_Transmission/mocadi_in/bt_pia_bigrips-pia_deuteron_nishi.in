@@ -1,0 +1,1254 @@
+/* MOCADI input file by GICOSY2MOCADI */ 
+epax 2
+atima-1.0
+option listmode cwn
+* In GICOSY the system was calculated for
+* Brho=   2.4655085     Tm  energy=   365.19199     MeV
+* Erho=   344.18701     MV  charge=   2.0000000     e
+*    v=  1.39600816E+08 m/s   mass=   3.0160301     amu
+********************************************************************
+*
+*** primary beam(delta_p=0.1%>>delta_E=0.1784%)***
+BEAM 
+200000
+250, 0, 2, 1
+2
+0.10,  2.00, 0, 0, 0
+2
+0.10,  2.00, 0, 0, 0
+2
+*0.0001, 0, 0, 0, 0
+0.1784,  0, 0, 0, 0
+*** 
+
+*********************************************************************
+MATRIXFILE
+/home/oper/optics/MOCADI/nishi/matrix/
+*********************************************************************
+*
+*******SRC(start)********
+EXPECTED-VALUES
+SAVE #0                  
+***********************************
+MATRIX                'BTline_start'
+SRC000GICO.MAT
+2.0141, 1, 250.0                          
+3, 3 
+*******BT Line(start)********
+EXPECTED-VALUES
+SAVE #1                  
+***********************************
+DRIFT
+   0.000000
+DRIFT
+ 200.000000
+DRIFT
+  60.000004
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA001.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  20.000000
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA002.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  20.000000
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA003.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  20.000000
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA004.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  80.000000
+DRIFT
+  35.600002
+DRIFT
+ 200.000000
+DRIFT
+ 137.600006
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA005.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  30.000002
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA006.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  30.000002
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA007.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  75.000000
+DRIFT
+  75.000000
+COLL
+1, 0, 0, 5.7, 2.5, 0
+MATRIX                 'dipole'
+SRCBRIPPIA008.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+1, 0, 0, 5.7, 2.5, 0
+DRIFT
+  70.000000
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA009.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  30.000002
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA010.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+ 164.500000
+DRIFT
+  27.000002
+***(piad-T11-upstream)************
+EXPECTED-VALUES
+SAVE   #2
+**********************************
+*
+* ***Al 2mm begin***
+* MATTER
+* 27, 13, 2700
+* 2, 0.2
+* 0, 0, 0 
+* 0, 0, 0
+* 1, 1
+* 0, 0, 0, 0
+* ***Al 2mm end***
+*
+***(piaf-T11-downstream)**********
+EXPECTED-VALUES
+SAVE   #3
+**********************************
+DRIFT
+ 103.000000
+DRIFT
+ 156.699997
+*
+* here focus
+*
+DRIFT
+ 357.399994
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA011.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  30.000002
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA012.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  24.299999
+DRIFT
+  98.199997
+COLL
+1, 0, 0, 5.7, 2.5, 0
+MATRIX                 'dipole'
+SRCBRIPPIA013.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+1, 0, 0, 5.7, 2.5, 0
+DRIFT
+  78.199997
+DRIFT
+  27.799999
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA014.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  20.000000
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA015.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  20.000000
+COLL
+3, 0, 0, 3.10, 3.10, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA016.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 3.10, 3.10, 0
+DRIFT
+  41.200001
+DRIFT
+  71.200005
+COLL
+1, 0, 0, 5.7, 2.5, 0
+MATRIX                 'dipole'
+SRCBRIPPIA017.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+1, 0, 0, 5.7, 2.5, 0
+DRIFT
+  87.599998
+COLL
+3, 0, 0, 5.0, 5.0, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA018.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 5.0, 5.0, 0
+DRIFT
+  25.000000
+COLL
+3, 0, 0, 5.0, 5.0, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA019.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 5.0, 5.0, 0
+DRIFT
+  25.000000
+COLL
+3, 0, 0, 5.0, 5.0, 0
+MATRIX                'quadrupole'
+SRCBRIPPIA020.MAT
+2.0141, 1, 250.0                          
+3, 3                                    
+COLL
+3, 0, 0, 5.0, 5.0, 0
+DRIFT
+  42.200001
+DRIFT
+ 130.000000
+***(F0)***************************
+EXPECTED-VALUES
+SAVE   #4
+**********************************
+*
+***Fe 10mm begin***
+*MATTER
+*56, 26, 7874
+*2, 1.0
+*0, 0, 0 
+*0, 0, 0
+*1, 1
+*0, 0, 0, 0
+***Fe 10mm end***
+*
+***Al Wedge Target begin***
+*MATTER
+27, 13, 2700
+2, 0.3
+1, 0.074074, 0 
+0, 0, 0
+1, 1
+0, 0, 0, 0
+***Al Wedge Target end***
+*
+***Sn122 Target begin***
+TARGET
+121.90344, 50, 7477.5, 0, 0.0, 134.0, 0.0, 6.0
+3.016029, 2
+5, 12.5, 3.016029, 2, 121.194
+1, 1, 1, 1, 1, -1
+***Sn122 Target end*** 
+*
+*
+********F0(after target)*********
+EXPECTED-VALUES
+SAVE #0+5                  
+***********************************
+DRIFT
+   0.000000
+DRIFT
+  48.500000
+MATRIX                   'ff' 
+BIGRIPSPIA001.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  9.000,  9.000,  0
+MATRIX                'quadrupole STQ11'
+BIGRIPSPIA002.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  9.000,  9.000,  0
+MATRIX                   'ff' 
+BIGRIPSPIA003.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA004.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA005.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA006.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA007.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA008.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA009.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA010.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                 'dipole'
+BIGRIPSPIA011.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                   'ff' 
+BIGRIPSPIA012.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA013.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA014.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA015.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA016.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA017.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA018.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA019.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA020.MAT
+3.016029, 2, 121.194                          
+3, 3                                 
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA021.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  73.500000
+*----------------------------------
+***(F1)***
+EXPECTED-VALUES
+SAVE   #1+5
+*----------------------------------
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA022.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA023.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA024.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA025.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA026.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA027.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA028.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA029.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA030.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA031.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                 'dipole'
+BIGRIPSPIA032.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                   'ff' 
+BIGRIPSPIA033.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA034.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA035.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA036.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA037.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA038.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA039.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA040.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA041.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA042.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+ 148.500000
+*----------------------------------
+***(F2)***
+EXPECTED-VALUES
+SAVE   #2
+*----------------------------------
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA043.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA044.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA045.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA046.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA047.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA048.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA049.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA050.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA051.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA052.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA053.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA054.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA055.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA056.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA057.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA058.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA059.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA060.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+ 148.500000
+*----------------------------------
+***(F3)***
+EXPECTED-VALUES
+SAVE   #3
+*----------------------------------
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA061.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA062.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA063.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA064.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA065.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA066.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA067.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA068.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA069.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA070.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                 'dipole'
+BIGRIPSPIA071.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                   'ff' 
+BIGRIPSPIA072.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA073.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA074.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA075.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA076.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA077.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA078.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA079.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA080.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA081.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  73.500000
+*----------------------------------
+***(F4)***
+EXPECTED-VALUES
+SAVE   #4
+*----------------------------------
+DRIFT
+  73.500000
+MATRIX                   'ff' 
+BIGRIPSPIA082.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA083.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA084.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA085.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA086.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA087.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA088.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA089.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA090.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA091.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                 'dipole'
+BIGRIPSPIA092.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                   'ff' 
+BIGRIPSPIA093.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA094.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA095.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA096.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA097.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA098.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA099.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA100.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA101.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA102.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+DRIFT
+ -35.880318
+*----------------------------------
+***(F5)***
+EXPECTED-VALUES
+SAVE   #5
+*----------------------------------
+DRIFT
+  35.880318
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA103.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA104.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA105.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA106.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA107.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA108.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA109.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA110.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA111.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA112.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                 'dipole'
+BIGRIPSPIA113.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                   'ff' 
+BIGRIPSPIA114.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA115.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA116.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA117.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA118.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA119.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA120.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA121.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA122.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA123.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  73.500000
+*----------------------------------
+***(F6)***
+EXPECTED-VALUES
+SAVE   #6
+*----------------------------------
+DRIFT
+  73.500000
+MATRIX                   'ff' 
+BIGRIPSPIA124.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA125.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA126.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA127.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA128.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA129.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA130.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA131.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA132.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA133.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                 'dipole'
+BIGRIPSPIA134.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+1, 0, 0,  20.000,   6.100, 0
+MATRIX                   'ff' 
+BIGRIPSPIA135.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  98.500000
+MATRIX                   'ff' 
+BIGRIPSPIA136.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX              'multipole' 
+BIGRIPSPIA137.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0,  12.000,  12.000, 0
+MATRIX                   'ff' 
+BIGRIPSPIA138.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA139.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA140.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA141.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+  17.500000
+MATRIX                   'ff' 
+BIGRIPSPIA142.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                'quadrupole'
+BIGRIPSPIA143.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+COLL
+3, 0, 0, 12.00, 12.00, 0
+MATRIX                   'ff' 
+BIGRIPSPIA144.MAT
+3.016029, 2, 121.194                          
+3, 3                                    
+DRIFT
+ 148.500000
+*----------------------------------
+***(F7)***
+EXPECTED-VALUES
+SAVE   #7
+*----------------------------------
+***********************************
+ 
+END

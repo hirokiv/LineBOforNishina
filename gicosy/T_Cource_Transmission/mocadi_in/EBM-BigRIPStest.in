@@ -1,0 +1,440 @@
+ /* MOCADI input file by GICOSY2MOCADI */
+  
+ epax 2
+ atima-1.0
+ option listmode cwn
+  
+ * In GICOSY the system was calculated for
+ * Brho=   8.05699444     Tm  energy=   82111.3828     MeV
+ * Erho=   1651.51624     MV  charge=   86.0000000     e
+ *    v=   204979200.     m/s   mass=   238.003998     amu
+  
+ BEAM
+ 10000
+345.000000, 0, 238.004000, 86
+2
+0.050000, 0.500000, 0, 0, 0
+2
+0.100000, 0.500000, 0, 0, 0
+2
+0.200000,  0, 0, 0, 0
+
+  
+ ERWARTUNGSWERTE
+ SAVE
+ ***********************************
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS000.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ SAVE #1
+ MATRIX                   'ff' 
+ ./matrix/SRC000GICO.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3
+ SAVE #2
+ DRIFT
+ 194.500000
+ DRIFT
+    5.500000
+ DRIFT
+   60.000004
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS001.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS002.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS003.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS004.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS005.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS006.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS007.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS008.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS009.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS010.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS011.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS012.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   60.549999
+ DRIFT
+   19.450001
+ DRIFT
+   35.600002
+ DRIFT
+  200.000000
+ DRIFT
+  137.600006
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS013.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS014.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS015.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   30.000002
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS016.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS017.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS018.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   30.000002
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS019.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS020.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS021.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   67.949997
+ DRIFT
+    7.050000
+ DRIFT
+   75.000000
+ COLL
+ 1, 0, 0, 20.000000, 2.500000, 0.0  
+ SAVE # 3 savepoint before dipole
+SAVE # 5 savepoint before dipole
+SAVE # 7 savepoint before dipole
+MATRIX                 'dipole'
+ ./matrix/SRCBIGRIPS022.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0, 20.000000, 2.500000, 0.0  
+ SAVE # 8 savepoint after dipole
+ SAVE # 6 savepoint after dipole
+ SAVE # 4 savepoint after dipole
+ DRIFT
+   70.000000
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS023.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS024.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS025.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   30.000002
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS026.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS027.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ DRIFT
+  353.750000
+ DRIFT
+   85.000000
+ DRIFT
+    0.000000
+ DRIFT
+   -0.000000
+ DRIFT
+   15.299999
+ DRIFT
+  357.450012
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS028.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS029.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS030.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   30.000002
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS031.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS032.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS033.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   24.299999
+ DRIFT
+    0.050000
+ DRIFT
+   98.150002
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS034.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0, 20.000000, 2.500000, 0.0  
+ MATRIX                 'dipole'
+ ./matrix/SRCBIGRIPS035.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0, 20.000000, 2.500000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS036.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   78.199997
+ DRIFT
+    0.050000
+ DRIFT
+   27.750000
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS037.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS038.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS039.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS040.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS041.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS042.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS043.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS044.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS045.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   41.200001
+ DRIFT
+    0.050000
+ DRIFT
+   71.150002
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS046.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0, 20.000000, 2.500000, 0.0  
+ MATRIX                 'dipole'
+ ./matrix/SRCBIGRIPS047.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0, 20.000000, 2.500000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS048.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   87.599998
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS049.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 5.000000, 5.000000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS050.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 5.000000, 5.000000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS051.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   25.000000
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS052.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 5.000000, 5.000000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS053.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 5.000000, 5.000000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS054.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   25.000000
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS055.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 5.000000, 5.000000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/SRCBIGRIPS056.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 5.000000, 5.000000, 0.0  
+ MATRIX                   'ff' 
+ ./matrix/SRCBIGRIPS057.MAT
+ 238.004000, 86, 345.000000                          
+ 3, 3                                    
+ DRIFT
+   35.700001
+ DRIFT
+    6.500000
+ DRIFT
+   95.500000
+ DRIFT
+   34.500000
+ ***********************************
+ ERWARTUNGSWERTE
+ SAVE
+  
+ END

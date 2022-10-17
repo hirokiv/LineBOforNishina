@@ -1,0 +1,1350 @@
+    MOCADI 4.2 (PAW) Thu Dec 23 19:03:43 2021
+
+ 
+  **********************  beam  ************************
+
+  num of atoms=      10000         mode x,a    =          2     
+  energy      =   345.0000 MeV/A  max dx      =     0.0500  cm  
+  time        =     0.0000  s     max da      =     0.5000 mrad 
+  mass        =   238.0040        r12         =     0.0000      
+  protons     =         86        ver x       =     0.0000  cm  
+  electrons   =          0        ver a       =     0.0000 mrad 
+
+  mode y,b    =          2        mode e,t    =          2      
+  max dy      =     0.1000  cm    max de      =     0.2000  %   
+  max db      =     0.5000 mrad   max dt      =     0.0000 s    
+  r34         =     0.0000        r56         =     0.0000      
+  ver y       =     0.0000  cm    ver e       =     0.0000      
+  ver b       =     0.0000 mrad   ver t       =     0.0000 s    
+
+  ***************************************************
+  ***********  expected value  1  ******************
+  ***************************************************
+
+  
+
+
+  ********************** save   1 ********************
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS000.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  ********************** save   2 ********************
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRC000GICO.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  ********************** save   3 ********************
+
+  **********************  drift ***********************
+          length      =   194.5000 cm
+
+  **********************  drift ***********************
+          length      =     5.5000 cm
+
+  **********************  drift ***********************
+          length      =    60.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS001.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll   1 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS002.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll   2 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS003.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    20.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS004.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll   3 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS005.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll   4 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS006.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    20.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS007.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll   5 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS008.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll   6 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS009.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    20.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS010.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll   7 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS011.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll   8 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS012.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    60.5500 cm
+
+  **********************  drift ***********************
+          length      =    19.4500 cm
+
+  **********************  drift ***********************
+          length      =    35.6000 cm
+
+  **********************  drift ***********************
+          length      =   200.0000 cm
+
+  **********************  drift ***********************
+          length      =   137.6000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS013.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll   9 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS014.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll  10 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS015.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    30.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS016.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  11 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS017.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll  12 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS018.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    30.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS019.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  13 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS020.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll  14 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS021.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    67.9500 cm
+
+  **********************  drift ***********************
+          length      =     7.0500 cm
+
+  **********************  drift ***********************
+          length      =    75.0000 cm
+
+  *********************  coll  15 **********************
+          mode of coll=     1 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =    10.0000 cm
+          ymax        =     1.2500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************** save   4 ********************
+
+  ********************** save   5 ********************
+
+  ********************** save   6 ********************
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS022.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   1.7453e+02 cm
+  *********************  coll  16 **********************
+          mode of coll=     1 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =    10.0000 cm
+          ymax        =     1.2500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************** save   7 ********************
+
+  ********************** save   8 ********************
+
+  ********************** save   9 ********************
+
+  **********************  drift ***********************
+          length      =    70.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS023.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  17 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS024.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll  18 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS025.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    30.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS026.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  19 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS027.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll  20 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  **********************  drift ***********************
+          length      =   353.7500 cm
+
+  **********************  drift ***********************
+          length      =    85.0000 cm
+
+  **********************  drift ***********************
+          length      =     0.0000 cm
+
+  **********************  drift ***********************
+          length      =    -0.0000 cm
+
+  **********************  drift ***********************
+          length      =    15.3000 cm
+
+  **********************  drift ***********************
+          length      =   357.4500 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS028.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  21 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS029.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll  22 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS030.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    30.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS031.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  23 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS032.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll  24 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS033.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    24.3000 cm
+
+  **********************  drift ***********************
+          length      =     0.0500 cm
+
+  **********************  drift ***********************
+          length      =    98.1500 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS034.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  25 **********************
+          mode of coll=     1 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =    10.0000 cm
+          ymax        =     1.2500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS035.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   3.5081e+02 cm
+  *********************  coll  26 **********************
+          mode of coll=     1 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =    10.0000 cm
+          ymax        =     1.2500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS036.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    78.2000 cm
+
+  **********************  drift ***********************
+          length      =     0.0500 cm
+
+  **********************  drift ***********************
+          length      =    27.7500 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS037.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  27 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS038.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+01 cm
+  *********************  coll  28 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS039.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    20.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS040.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  29 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS041.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll  30 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS042.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    20.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS043.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  31 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS044.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   2.5000e+01 cm
+  *********************  coll  32 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     1.5500 cm
+          ymax        =     1.5500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS045.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    41.2000 cm
+
+  **********************  drift ***********************
+          length      =     0.0500 cm
+
+  **********************  drift ***********************
+          length      =    71.1500 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS046.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  33 **********************
+          mode of coll=     1 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =    10.0000 cm
+          ymax        =     1.2500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS047.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   3.5081e+02 cm
+  *********************  coll  34 **********************
+          mode of coll=     1 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =    10.0000 cm
+          ymax        =     1.2500 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS048.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    87.6000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS049.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  35 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     2.5000 cm
+          ymax        =     2.5000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS050.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll  36 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     2.5000 cm
+          ymax        =     2.5000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS051.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    25.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS052.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  37 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     2.5000 cm
+          ymax        =     2.5000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS053.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   8.5000e+01 cm
+  *********************  coll  38 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     2.5000 cm
+          ymax        =     2.5000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS054.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    25.0000 cm
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS055.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  *********************  coll  39 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     2.5000 cm
+          ymax        =     2.5000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS056.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   4.5000e+01 cm
+  *********************  coll  40 **********************
+          mode of coll=     3 
+          x0          =     0.0000 cm
+          y0          =     0.0000 cm
+          xmax        =     2.5000 cm
+          ymax        =     2.5000 cm
+          sig_fac     =     0.0000 cm
+
+
+  ********************* matrix ***********************
+          transfer matrix read from file = ./matrix/SRCBIGRIPS057.MAT
+
+          mass_ref    =       238.00400      
+          charge_ref  =        86.00000      
+          energy_ref  =       345.00000 MeV/u
+          momentum_ref=     2.07727e+05 MeV/c
+          velocity    =     2.04979e+10 cm/s 
+          calc order  =   3    
+          print order =   3    
+
+          length =   0.0000e+00 cm
+  **********************  drift ***********************
+          length      =    35.7000 cm
+
+  **********************  drift ***********************
+          length      =     6.5000 cm
+
+  **********************  drift ***********************
+          length      =    95.5000 cm
+
+  **********************  drift ***********************
+          length      =    34.5000 cm
+
+  ***************************************************
+  ***********  expected value  2  ******************
+  ***************************************************
+
+  
+
+
+  ********************** save  10 ********************
+
+********************** end    ***********************
+
+
+  ********* expected value   1 *********************************************
+        ()
+
+ primary beam
+   tr: particles  =      10000 wi: teilchen  =       10000.000
+      tr: opt    =          1    tr: total =          1
+                       z   =          0.0000cm
+
+     <     x     >= -4.469456e-04 cm     sigma     x     =  5.011957e-02 cm   
+   max     x      =  1.972038e-01 cm       min     x     = -1.975188e-01 cm   
+
+     <     a     >=  1.391171e-02 mrad   sigma     a     =  5.015942e-01 mrad 
+   max     a      =  1.855420e+00 mrad     min     a     = -1.839406e+00 mrad 
+
+     <     y     >= -2.153452e-03 cm     sigma     y     =  1.009316e-01 cm   
+   max     y      =  4.041608e-01 cm       min     y     = -3.555362e-01 cm   
+
+     <     b     >=  2.483829e-03 mrad   sigma     b     =  4.967472e-01 mrad 
+   max     b      =  2.103984e+00 mrad     min     b     = -1.803354e+00 mrad 
+
+     <  energy   >=  3.449962e+02 MeV/u  sigma  energy   =  6.919659e-01 MeV/u
+   max  energy    =  3.474765e+02 MeV/u    min  energy   =  3.425831e+02 MeV/u
+
+     <   time    >=  0.000000e+00 mu s   sigma   time    =  0.000000e+00 mu s 
+   max   time     =  0.000000e+00 mu s     min   time    =  0.000000e+00 mu s 
+
+     <  mass     >=  2.380040e+02  u     sigma  mass     =  9.686439e-05  u   
+   max  mass      =  2.380040e+02  u       min  mass     =  2.380040e+02  u   
+
+     <    z      >=  8.600000e+01        sigma    z      =  0.000000e+00      
+   max    z       =  8.600000e+01          min    z      =  8.600000e+01      
+
+     < electrons >=  0.000000e+00        sigma electrons =  0.000000e+00      
+   max electrons  =  0.000000e+00          min electrons =  0.000000e+00      
+
+     <  nf/nsf   >=  1.000000e+00        sigma  nf/nsf   =  0.000000e+00      
+   max  nf/nsf    =  1.000000e+00          min  nf/nsf   =  1.000000e+00      
+
+     <  tof-tim  >=  0.000000e+00 mu s   sigma  tof-tim  =  0.000000e+00 mu s 
+   max  tof-tim   =  0.000000e+00 mu s     min  tof-tim  =  0.000000e+00 mu s 
+
+     <  delta e  >=  0.000000e+00 MeV    sigma  delta e  =  0.000000e+00 MeV  
+   max  delta e   =  0.000000e+00 MeV      min  delta e  =  0.000000e+00 MeV  
+
+     <   brho    >=  8.056942e+00  Tm    sigma   brho    =  9.342508e-03  Tm  
+   max   brho     =  8.090395e+00  Tm      min   brho    =  8.024329e+00  Tm  
+
+  ********* expected value   2 *********************************************
+        ()
+
+ primary beam
+   tr: particles  =       6960 wi: teilchen  =        6960.000
+      tr: opt    =      0.696    tr: total =      0.696
+                       z   =       4256.5553cm
+
+     <     x     >=  1.592693e-03 cm     sigma     x     =  1.076415e-02 cm   
+   max     x      =  5.839156e-02 cm       min     x     = -3.907042e-02 cm   
+
+     <     a     >= -9.627578e-03 mrad   sigma     a     =  2.257301e+00 mrad 
+   max     a      =  5.244164e+00 mrad     min     a     = -5.307768e+00 mrad 
+
+     <     y     >=  1.716294e-04 cm     sigma     y     =  3.613975e-02 cm   
+   max     y      =  1.046693e-01 cm       min     y     = -1.028142e-01 cm   
+
+     <     b     >=  1.919466e-02 mrad   sigma     b     =  3.678736e+00 mrad 
+   max     b      =  7.601524e+00 mrad     min     b     = -7.581361e+00 mrad 
+
+     <  energy   >=  3.450068e+02 MeV/u  sigma  energy   =  6.835745e-01 MeV/u
+   max  energy    =  3.474236e+02 MeV/u    min  energy   =  3.425831e+02 MeV/u
+
+     <   time    >=  2.076575e-01 mu s   sigma   time    =  1.223055e-04 mu s 
+   max   time     =  2.080796e-01 mu s     min   time    =  2.072204e-01 mu s 
+
+     <  mass     >=  2.380040e+02  u     sigma  mass     =  1.251623e-04  u   
+   max  mass      =  2.380040e+02  u       min  mass     =  2.380040e+02  u   
+
+     <    z      >=  8.600000e+01        sigma    z      =  0.000000e+00      
+   max    z       =  8.600000e+01          min    z      =  8.600000e+01      
+
+     < electrons >=  0.000000e+00        sigma electrons =  0.000000e+00      
+   max electrons  =  0.000000e+00          min electrons =  0.000000e+00      
+
+     <  nf/nsf   >=  1.000000e+00        sigma  nf/nsf   =  0.000000e+00      
+   max  nf/nsf    =  1.000000e+00          min  nf/nsf   =  1.000000e+00      
+
+     <  tof-tim  >=  2.076575e-01 mu s   sigma  tof-tim  =  1.223055e-04 mu s 
+   max  tof-tim   =  2.080796e-01 mu s     min  tof-tim  =  2.072204e-01 mu s 
+
+     <  delta e  >=  0.000000e+00 MeV    sigma  delta e  =  0.000000e+00 MeV  
+   max  delta e   =  0.000000e+00 MeV      min  delta e  =  0.000000e+00 MeV  
+
+     <   brho    >=  8.057084e+00  Tm    sigma   brho    =  9.229162e-03  Tm  
+   max   brho     =  8.089682e+00  Tm      min   brho    =  8.024329e+00  Tm  
+  *****************************************************************
+        used cpu  time :         0  sec
+        execution time :         1  sec
+  *****************************************************************

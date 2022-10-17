@@ -1,0 +1,443 @@
+ /* MOCADI input file by GICOSY2MOCADI */
+  
+ epax 2
+ atima-1.0
+ option listmode cwn
+  
+ * In GICOSY the system was calculated for
+ * Brho=   8.05699444     Tm  energy=   82111.3828     MeV
+ * Erho=   1651.51624     MV  charge=   86.0000000     e
+ *    v=   204979200.     m/s   mass=   238.003998     amu
+  
+ BEAM
+ 10000
+ 800.0, 0, 132, 54
+ 2
+ 0.001, 10, 0, 0, 0
+ 2
+ 0.001, 10, 0, 0, 0
+ 1
+ 1.000,  0, 0, 0, 0
+  
+ ERWARTUNGSWERTE
+ SAVE
+ ***********************************
+ *----------------------------------
+ EXPECTED-VALUES
+ SAVE   #           1
+ *----------------------------------
+ *----------------------------------
+ EXPECTED-VALUES
+ SAVE   #           2
+ *----------------------------------
+ DRIFT
+  194.500000
+ DRIFT
+    5.500000
+ DRIFT
+   60.000004
+ MATRIX                   'ff' 
+ GEXP001.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP002.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP003.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ GEXP004.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP005.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP006.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ GEXP007.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP008.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP009.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ GEXP010.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP011.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP012.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   60.549999
+ DRIFT
+   19.450001
+ DRIFT
+   35.600002
+ DRIFT
+  200.000000
+ DRIFT
+  137.600006
+ MATRIX                   'ff' 
+ GEXP013.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP014.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP015.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   30.000002
+ MATRIX                   'ff' 
+ GEXP016.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP017.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP018.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   30.000002
+ MATRIX                   'ff' 
+ GEXP019.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP020.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP021.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   67.949997
+ DRIFT
+    7.050000
+ DRIFT
+   75.000000
+ COLL
+ 1, 0, 0,  20.000,   2.500, 0
+ MATRIX                 'dipole'
+ GEXP022.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0,  20.000,   2.500, 0
+ DRIFT
+   70.000000
+ MATRIX                   'ff' 
+ GEXP023.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP024.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP025.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   30.000002
+ MATRIX                   'ff' 
+ GEXP026.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP027.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ DRIFT
+  353.750000
+ DRIFT
+   85.000000
+ DRIFT
+    0.000000
+ *----------------------------------
+ EXPECTED-VALUES
+ SAVE   #           3
+ *----------------------------------
+ DRIFT
+   -0.000000
+ DRIFT
+   15.299999
+ DRIFT
+  357.450012
+ MATRIX                   'ff' 
+ GEXP028.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP029.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP030.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   30.000002
+ MATRIX                   'ff' 
+ GEXP031.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP032.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP033.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   24.299999
+ DRIFT
+    0.050000
+ DRIFT
+   98.150002
+ MATRIX                   'ff' 
+ GEXP034.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0,  20.000,   2.500, 0
+ MATRIX                 'dipole'
+ GEXP035.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0,  20.000,   2.500, 0
+ MATRIX                   'ff' 
+ GEXP036.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   78.199997
+ DRIFT
+    0.050000
+ DRIFT
+   27.750000
+ MATRIX                   'ff' 
+ GEXP037.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP038.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP039.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ GEXP040.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP041.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP042.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ GEXP043.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                'quadrupole'
+ GEXP044.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   3.100,   3.100,   3.100
+ MATRIX                   'ff' 
+ GEXP045.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   41.200001
+ DRIFT
+    0.050000
+ DRIFT
+   71.150002
+ MATRIX                   'ff' 
+ GEXP046.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0,  20.000,   2.500, 0
+ MATRIX                 'dipole'
+ GEXP047.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0,  20.000,   2.500, 0
+ MATRIX                   'ff' 
+ GEXP048.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   87.599998
+ MATRIX                   'ff' 
+ GEXP049.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   5.000,   5.000,   5.000
+ MATRIX                'quadrupole'
+ GEXP050.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   5.000,   5.000,   5.000
+ MATRIX                   'ff' 
+ GEXP051.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   25.000000
+ MATRIX                   'ff' 
+ GEXP052.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   5.000,   5.000,   5.000
+ MATRIX                'quadrupole'
+ GEXP053.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   5.000,   5.000,   5.000
+ MATRIX                   'ff' 
+ GEXP054.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   25.000000
+ MATRIX                   'ff' 
+ GEXP055.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   5.000,   5.000,   5.000
+ MATRIX                'quadrupole'
+ GEXP056.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ COLL
+ 4, 0, 0,   5.000,   5.000,   5.000
+ MATRIX                   'ff' 
+ GEXP057.MAT
+ 132, 54, 800.0                          
+ 3, 3                                    
+ DRIFT
+   35.700001
+ DRIFT
+    6.500000
+ DRIFT
+   95.500000
+ DRIFT
+   34.500000
+ *----------------------------------
+ EXPECTED-VALUES
+ SAVE   #           4
+ *----------------------------------
+ *----------------------------------
+ EXPECTED-VALUES
+ SAVE   #           5
+ *----------------------------------
+ ***********************************
+ ERWARTUNGSWERTE
+ SAVE
+  
+ END

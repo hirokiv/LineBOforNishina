@@ -1,0 +1,761 @@
+ /* MOCADI input file by GICOSY2MOCADI */
+  
+ epax 2
+ atima-1.0
+ option listmode cwn
+  
+ * In GICOSY the system was calculated for
+ * Brho=   1.38553739     Tm  energy=   306.283142     MeV
+ * Erho=   46.9693718     MV  charge=   13.0000000     e
+ *    v=   33899748.0     m/s   mass=   50.9368248     amu
+  
+ BEAM
+ 10000
+6.013000, 0, 50.936825, 13
+2
+0.061000, 2.030000, 0, 0, 0
+2
+0.090000, 1.400000, 0, 0, 0
+2
+0.080000,  0, 0, 0, 0
+
+  
+ ERWARTUNGSWERTE
+ SAVE
+ ***********************************
+ DRIFT
+ 0.000
+MATRIX                   'ff' 
+ ./matrix/GARISIII000.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ SAVE #1
+ DRIFT
+ 49.599998
+ MATRIX                   'ff' 
+ ./matrix/GARISIII001.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII002.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII003.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII004.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII005.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII006.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII007.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII008.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII009.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII010.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII011.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL 
+ 3, 0, 0,   3.100,   3.100,   0
+ SAVE # 2 savepoint for quadrupole 
+ MATRIX                   'ff' 
+ ./matrix/GARISIII012.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ ./matrix/GARISIII013.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII014.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII015.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII016.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII017.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII018.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII019.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII020.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII021.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII022.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII023.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL 
+ 3, 0, 0,   3.100,   3.100,   0
+ SAVE # 3 savepoint for quadrupole 
+ MATRIX                   'ff' 
+ ./matrix/GARISIII024.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ ./matrix/GARISIII025.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII026.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII027.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII028.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII029.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII030.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII031.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII032.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII033.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII034.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII035.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL 
+ 3, 0, 0,   3.100,   3.100,   0
+ SAVE # 4 savepoint for quadrupole 
+ MATRIX                   'ff' 
+ ./matrix/GARISIII036.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ DRIFT
+   21.750000
+ DRIFT
+    2.250000
+ COLL
+ 3, 0, 0, 2.950000, 2.950000, 0.0  
+ DRIFT
+   32.000000
+ MATRIX                   'ff' 
+ ./matrix/GARISIII037.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0, 20.000000, 2.500000, 0.0  
+ MATRIX                 'dipole'
+ ./matrix/GARISIII038.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0, 20.000000, 2.500000, 0.0  
+ SAVE # 5 savepoint for dipole
+ MATRIX                   'ff' 
+ ./matrix/GARISIII039.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ DRIFT
+   32.000000
+ COLL
+ 3, 0, 0, 2.950000, 2.950000, 0.0  
+ DRIFT
+   -2.000000
+ DRIFT
+   20.000000
+ MATRIX                   'ff' 
+ ./matrix/GARISIII040.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII041.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII042.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII043.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII044.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII045.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII046.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII047.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII048.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII049.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII050.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL 
+ 3, 0, 0,   3.100,   3.100,   0
+ SAVE # 6 savepoint for quadrupole 
+ MATRIX                   'ff' 
+ ./matrix/GARISIII051.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ DRIFT
+   49.549999
+ SAVE # 7 savepoint for PFe11
+ DRIFT
+   49.549999
+ MATRIX                   'ff' 
+ ./matrix/GARISIII052.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII053.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII054.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII055.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII056.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII057.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII058.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII059.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII060.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII061.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII062.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL 
+ 3, 0, 0,   3.100,   3.100,   0
+ SAVE # 8 savepoint for quadrupole 
+ MATRIX                   'ff' 
+ ./matrix/GARISIII063.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ DRIFT
+   11.700000
+ DRIFT
+   19.150000
+ DRIFT
+   -9.849999
+ COLL
+ 3, 0, 0, 2.950000, 2.950000, 0.0  
+ DRIFT
+   29.000000
+ COLL
+ 3, 0, 0, 2.950000, 2.950000, 0.0  
+ COLL
+ 1, 0, 0, 20.000000, 2.500000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII064.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 1, 0, 0, 20.000000, 2.500000, 0.0  
+ COLL
+ 3, 0, 0, 2.950000, 2.950000, 0.0  
+ DRIFT
+   58.000000
+ COLL
+ 3, 0, 0, 2.950000, 2.950000, 0.0  
+ DRIFT
+   -9.200000
+ DRIFT
+   19.799999
+ DRIFT
+   28.099998
+ SAVE # 9 savepoint for PFe12
+ DRIFT
+   15.600000
+ MATRIX                   'ff' 
+ ./matrix/GARISIII065.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII066.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII067.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII068.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII069.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII070.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII071.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII072.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII073.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII074.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII075.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL 
+ 3, 0, 0,   3.100,   3.100,   0
+ SAVE # 10 savepoint for quadrupole 
+ MATRIX                   'ff' 
+ ./matrix/GARISIII076.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ DRIFT
+   18.799999
+ MATRIX                   'ff' 
+ ./matrix/GARISIII077.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII078.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII079.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII080.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII081.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII082.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII083.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII084.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII085.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII086.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ COLL
+ 3, 0, 0, 3.100000, 3.100000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII087.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL 
+ 3, 0, 0,   3.100,   3.100,   0
+ SAVE # 11 savepoint for quadrupole 
+ MATRIX                   'ff' 
+ ./matrix/GARISIII088.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ DRIFT
+   43.950001
+ COLL
+ 3, 0, 0, 1.250000, 1.250000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII089.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 1.250000, 1.250000, 0.0  
+ COLL
+ 3, 0, 0, 0.750000, 0.750000, 0.0  
+ MATRIX                'quadrupole'
+ ./matrix/GARISIII090.MAT
+ 50.936825, 13, 6.013000                          
+ 3, 3                                    
+ COLL
+ 3, 0, 0, 0.750000, 0.750000, 0.0  
+ DRIFT
+   18.189999
+ ***********************************
+ ERWARTUNGSWERTE
+ SAVE
+  
+ END

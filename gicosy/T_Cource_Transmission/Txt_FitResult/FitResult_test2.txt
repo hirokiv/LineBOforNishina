@@ -1,0 +1,17 @@
+Maximum number of function evaluations has been exceeded.
+    fun: 34.600000
+message: Maximum number of function evaluations has been exceeded.
+   nfev: 8
+    nit: 1
+ status: 1
+success: False
+
+BQ = [
+-0.366041,#BQTa
++0.265168,#BQTb
+-0.302820,#BQTc
++0.199156,#BQS1
+-0.172120,#BQS2
++0.255106,#BQDa
+-0.221946 #BQDb
+]
