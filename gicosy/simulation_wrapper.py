@@ -1,40 +1,62 @@
 import os.path
 import time
-from Evaluate_envelope_mocadi import mocadi_func
+import gicosy.T_Cource_Transmission as TCT
 import numpy as np
 import sys
 
 
 class MocadiInterface:
 
-    def __init__(self, identifier):
+    def __init__(self, identifier, path2Mocadi='./T_Cource_Transmission/'):
         self.identifier = identifier
         self.filename = 'MonteCarlo_Result' + self.identifier + '.txt'
+        self.filepath = path2Mocadi + self.filename
         self.sleeptime = 0.05
         self.FILEMAXTD = 3
         self.lastline = 6 # last line of the output which contain ratio information
         self.transports = (7, 8) # max particles, transmitted
+        self.path2Mocadi = path2Mocadi
+        self.pathCurrent = os.getcwd()
+        self.logfile = 'mocadiout.log'
 
-    def RunMocadi(self):
-        # delete existing path file and run Mocadi
-        if os.path.isfile(self.filename):
-          os.remove(self.filename)
+    def RunMocadi(self, X):
+        # X contains normalized scale parameter for input variables
+
+        # output to mocadiout.log
+        sys.stdout = open(self.logfile, 'a+') # temporaly set mocadiout.log as output
+        try: 
+            # change directory and run mocadi. 
+            # return to current paht when error occurs
+            os.chdir(self.path2Mocadi)
+            # delete existing path file and run Mocadi
+            if os.path.isfile(self.filename):
+              os.remove(self.filename)
+            
+            TCT.mocadi_func(self.identifier, X)
         
-        mocadi_func(self.identifier)
-    
-        # check if the file in need is generated
-        starttime = time.time() # start time
-        if( not( os.path.isfile(self.filename) ) ):
-            time.sleep(self.sleeptime)
-            td = time.time() - starttime
-            if td.second > self.FILEMAXTD:
-              sys.exit('Mocadi failed in creating file in need')
+            # intended for asynchronous setting but seems not necessary
+            # # check if the file in need is generated
+            # starttime = time.time() # start time
+            # if( not( os.path.isfile(self.filename) ) ):
+            #     time.sleep(self.sleeptime)
+            #     td = time.time() - starttime
+            #     if td.second > self.FILEMAXTD:
+            #       sys.exit('Mocadi failed in creating file in need')
 
+            print('Succeeded in generating simulation results')
+    
+        except:
+            os.chdir(self.pathCurrent)
+            sys.exit('Error in generating simulation result')
+
+        finally:
+            os.chdir(self.pathCurrent)
+            sys.stdout = sys.__stdout__ # console output
      
     def LoadMocadiResults(self):
         # load file and check if the file generate proper output
     
-        with open(self.filename) as f:
+        with open(self.filepath) as f:
             lineiter = 0 # iterator
             for line in f.readlines():
     
@@ -57,11 +79,6 @@ class MocadiInterface:
 
 if __name__ == '__main__':
     mocadi = MocadiInterface('_hogehoge')
-
-    sys.stdout = open('mocadiout.log', 'a+') # temporaly set mocadiout.log as output
     mocadi.RunMocadi()
-    sys.stdout = sys.__stdout__ # console output
- 
-
     ratio = mocadi.LoadMocadiResults()
     print("Output : " + str(ratio) )

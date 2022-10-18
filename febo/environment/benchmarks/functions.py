@@ -2,6 +2,7 @@ from febo.utils.config import ConfigField, assign_config
 from .benchmarks import BenchmarkEnvironment, BenchmarkEnvironmentConfig
 import numpy as np
 from febo.environment.domain import DiscreteDomain, ContinuousDomain
+from gicosy.simulation_wrapper import MocadiInterface
 
 
 
@@ -182,6 +183,29 @@ class CosUnique1D(BenchmarkEnvironment):
 
     def f(self, X):
         return  -np.cos(10*np.pi*X) + 0.1 - 0.1*np.abs(X-0.5)
+
+
+class MocadiSimulation(BenchmarkEnvironment):
+    """
+    Camelback benchmark function.
+    """
+    def __init__(self, path=None):
+        super().__init__(path)
+        ones = np.ones(self.config.dimension)
+        self._x0 = 0.0*ones/np.sqrt(self.config.dimension) # initially all 0
+        self._max_value = 1.0
+        self._domain = ContinuousDomain(-ones, ones)
+        # specify to the path where simulation located
+        self.mocadi = MocadiInterface('__environment', '../../../gicosy/T_Cource_Transmission/')
+
+    def f(self, X):
+        X = np.atleast_2d(X)
+        self.mocadi.RunMocadi(X)
+        Y = 2*np.sum(np.square(X), axis=1)
+        return (1 - Y)**2
+
+
+
 #
 # class DSafetyConstraintsEnv(BenchmarkEnvironment):
 #     """ implements a _get_saftey_constraint methods, which returns self.domain_dimension safety constraints. """

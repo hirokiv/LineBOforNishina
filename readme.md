@@ -15,6 +15,10 @@ To reproduce the experiments,
 3. pip install git+https://github.com/automl/HPOlib1.5
 4. pip install git+https://github.com/befelix/SafeOpt.git
 
+In case for newly set python3.7 environment, following error occurs
+"AttributeError: 'EntryPoints' object has no attribute 'get'C"
+Try installing older version of importlib-metadata
+pip install importlib-metadata==4.13.0
 
 To run the experiments, replace "{experiment_name}" in the instructions below by any of:
 

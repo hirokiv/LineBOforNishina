@@ -1,20 +1,103 @@
 import sys
 import os
 import re
-import Func_Edit_Files
-#import Ana_Root_Transmission
+from .Func_Edit_Files import Beam_proparty, Edit_gicosy_TCource, Edit_MatrixInit_EBM, Edit_mocadi_TCource
+# import Ana_Root_Transmission
 import time
 import math
 
 
+# prepared to add path to the save path, but no longer needed
+# def p_re(path, string):
+#     # replace path to the directory containting T_Course_Transmission 
+#     # specify as ./~
+#     if not (type(path) is str):
+#         sys.exit('Wrapper path error in Evaluate_Envelope_Mocadi.py')
+#     if path[-1] != '/':
+#         path += '/'
+#     return string.replace("./", "./" + path)
+
+# initial BQ values (hard-coded)
+class ElectroMagnetConfig:
+    def __init__(self, X):
+        self.BQ0 = np.atleast_2d([
+            -3.58757E-01,
+            -8.50502E-03,
+            0.180925008,
+            0.265975226,
+            0,
+            -0.00136544,
+            0.044999297,
+            0.364942752,
+            -0.42834382,
+            -0.4391684,
+            0.34020087,
+            -0.29690258,
+            0.53968229,
+            -0.25515065,
+            0.740710077,
+            -0.6154543,
+            0.511847673    
+        ]) # initialize as 2d array
+    
+        # note for later restricting the input value
+        self.polarity = [
+           -1,-1,+1,+1,
+            -1,-1,+1,
+            +1,-1,
+            -1,+1,
+            -1,+1,-1,
+            +1,-1,+1
+        ]
+        self.BQ = None
+        # Following factors are factors for normalized variation between (-1,1)
+        tempBQ0 = self.BQ0
+        tempBQ0[4] = 0.1 # just to augment for multiplication factor
+        self.BQ0_factor = tempBQ * 0.2 # set to \pm 20%
+
+        self.setBQ(X)
+
+    def setBQ(self, X):
+        if self.BQ0.shape != X.shape:
+            sys.exit('BQ set error')
+        self.BQ = self.BQ0 + self.BQ0_factor * X
+        return self.BQ
+
+    def getBQ(self):
+        if self.BQ == None or self.BQ.shape != self.BQ0.shape:
+            sys.exit('BQ set error')
+        return self.BQ.flatten()
+
+
 
 def mocadi_func(*args):
+    # args[0] : identifier
+    # args[1] : path
 
     # virtually generate args_sys
     arg1 = 'virtual_arg1'
-    args_sys = [arg1, args[0]]
+    args_sys = [arg1, args[0], args[1]]
+
+    print('Evaluate_envelope_mocadi.py : args_sys')
     print(args_sys)
-    ###############################
+
+    X_BQ = args_sys[2] # this should contain normalized scale between (-1,1)
+    BQConfig = ElectroMagnetConfig(X_BQ)
+
+    # Bmax=0.400
+    # . bounds_BQ=(
+    # #    (-0.480,+0.001),#BQTa
+    #     (-Bmax ,+0.001),#BQTa
+    #     ( 0.001,+Bmax),#BQTb    
+    #     (-Bmax ,+0.001),#BQTc
+    # #    ( 0.001,+Bmax),#BQS1
+    #     ( 0.001,+0.25),#BQS1
+    #     (-0.25 ,+0.001),#BQS2
+    #     ( 0.001,+Bmax),#BQDa
+    #     (-Bmax ,+0.001) #BQSb
+    #     )
+    # #Dipole_num=[5,8,11,14,15]
+    
     
     ndata=10000
     nelement_init = 12
@@ -53,39 +136,7 @@ def mocadi_func(*args):
     
     flag_track = 1
     
-    BQ = [
-        -3.58757E-01,
-        -8.50502E-03,
-        0.180925008,
-        0.265975226,
-        0,
-        -0.00136544,
-        0.044999297,
-        0.364942752,
-        -0.42834382,
-        -0.4391684,
-        0.34020087,
-        -0.29690258,
-        0.53968229,
-        -0.25515065,
-        0.740710077,
-        -0.6154543,
-        0.511847673    
-    ]
-    Bmax=0.400
-    bounds_BQ=(
-    #    (-0.480,+0.001),#BQTa
-        (-Bmax ,+0.001),#BQTa
-        ( 0.001,+Bmax),#BQTb    
-        (-Bmax ,+0.001),#BQTc
-    #    ( 0.001,+Bmax),#BQS1
-        ( 0.001,+0.25),#BQS1
-        (-0.25 ,+0.001),#BQS2
-        ( 0.001,+Bmax),#BQDa
-        (-Bmax ,+0.001) #BQSb
-        )
-    #Dipole_num=[5,8,11,14,15]
-    
+   
     data_lines=None
     
     os.system('cp ./gicosy_dat/EBM-BigRIPS_org.dat ./')
@@ -93,12 +144,12 @@ def mocadi_func(*args):
     
     
     print("# of args = ",len(args_sys))
-    if len(args_sys) <=  1:
+    if len(args_sys) <=  2:
         print ("Usage: python Evaluate_envelope_mocadi.py filename_output ")
         exit()
     
     
-    Beam = Func_Edit_Files.Beam_proparty(    
+    Beam = Beam_proparty(    
         sigmaX_mm   = sigXmm,
         sigmaA_mrad = sigAmrad,
         CorrH       = CorrerationH,
@@ -115,8 +166,9 @@ def mocadi_func(*args):
     x_spot = 0
     y_spot = 0
     
-    Func_Edit_Files.Edit_gicosy_TCource(Beam,args_sys[1],BQ,"EBM-BigRIPS_org.dat",flag_track)
-    os.system('./gicosy.sh EBM-BigRIPS%s.dat > gicosy_output.txt'%(args_sys[1]))
+    #Edit_gicosy_TCource(Beam,args_sys[1],BQ,"./EBM-BigRIPS_org.dat",flag_track)
+    Edit_gicosy_TCource(Beam,args_sys[1],BQConfig.getBQ,"./EBM-BigRIPS_org.dat",flag_track)
+    os.system('./gicosy.sh ./EBM-BigRIPS%s.dat > ./gicosy_output.txt'%(args_sys[1]))
     
     
     with open("gicosy_output.txt",encoding = "utf-8",mode="r") as f_gicosy_result:
@@ -145,16 +197,16 @@ def mocadi_func(*args):
         x_spot = math.sqrt((xx_val * Beam.sigmaXfp_mm)**2 + (xa_val * Beam.sigmaA_mrad)**2 + (xd_val * Beam.sigmaP)**2)
         y_spot = math.sqrt((yy_val * Beam.sigmaYfp_mm)**2 + (yb_val * Beam.sigmaB_mrad)**2)
         
-    Func_Edit_Files.Edit_MatrixInit_EBM(Beam)
+    Edit_MatrixInit_EBM(Beam)
     
-    filename_hbk, nelement = Func_Edit_Files.Edit_mocadi_TCource(args_sys[1],Beam,ndata,flag_calc_1st_order,dist_shape,duct_scale_factor)
-    os.system('mocadi-42e EBM-BigRIPS%s.in'%(args_sys[1]))
-    os.system('h2root ebm-bigrips%s.hbk'%(str.lower(args_sys[1])))
-    os.system('mv ebm-bigrips%s.root EBM-BigRIPS%s.root'%(str.lower(args_sys[1]),args_sys[1]))
+    filename_hbk, nelement = Edit_mocadi_TCource(args_sys[1],Beam,ndata,flag_calc_1st_order,dist_shape,duct_scale_factor)
+    os.system('mocadi-42e ./EBM-BigRIPS%s.in'%(args_sys[1]))
+    os.system('h2root ./ebm-bigrips%s.hbk'%(str.lower(args_sys[1])))
+    os.system('mv ./ebm-bigrips%s.root ./EBM-BigRIPS%s.root'%(str.lower(args_sys[1]),args_sys[1]))
     #     print(filename_root)
     print("element number is ", nelement)
         
-    os.system('root \"Ana_MOCADI_v2.C(\\\"EBM-BigRIPS%s.root\\\",%d,\\\"%s\\\")\" -q -b'%(args_sys[1],nelement,args_sys[1]))
+    os.system('root \"./Ana_MOCADI_v2.C(\\\"./EBM-BigRIPS%s.root\\\",%d,\\\"%s\\\")\" -q -b'%(args_sys[1],nelement,args_sys[1]))
     
     os.system('mv ./EBM-BigRIPS%s.root ./Root/EBM-BigRIPS%s_%dsample_%delement.root'%(args_sys[1],args_sys[1],ndata,nelement))
     os.system('mv ./*.eps ./figure/')
@@ -166,4 +218,6 @@ def mocadi_func(*args):
 if __name__ == '__main__':
 
     args_sys = sys.argv
+#    hoge = p_re(args_sys[2], './test') 
+#    print(hoge)
     mocadi_func(args_sys[1:])

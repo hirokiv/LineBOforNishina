@@ -67,7 +67,7 @@ experiment.multi:
 
 experiment.simple:
   algorithm: febo.algorithms.Random
-  environment: febo.environment.benchmarks.functions.Camelback
+  environment: febo.environment.benchmarks.functions.MocadiSimulation
   controller: febo.controller.simple.SimpleController
 
 
