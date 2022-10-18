@@ -25,15 +25,15 @@ algorithm.subdomainbo:
   min_queries_tr: 2*d
   max_queries_tr: 2*d
   acquisition: febo.algorithms.subdomainbo.acquisition.ucb
-  plot_every_step: false
+  plot_every_step: true
   plot: true
 
-algorithm.rembo:
-  emb_d: 2
-  interleaved_runs: 4
+  # algorithm.rembo:
+  #   emb_d: 2
+  #   interleaved_runs: 4
 
-algorithm.nelder_mead:
-  contraction_factor: 0.3
+  # algorithm.nelder_mead:
+  #   contraction_factor: 0.3
 
 algorithm.safeopt:
   points_per_dimension: 50
@@ -49,8 +49,8 @@ environment.benchmark:
   noise_obs_mode: none  # Can be set to "full", "evaluation" or "hidden".
   noise_function: 0.2
   aug_d: 10
-  lower_bound_objective: 0.
-  random_x0: true
+  lower_bound_objective: 0.5
+  random_x0: False
   random_x0_min_value: 0.2
 
 

@@ -187,22 +187,24 @@ class CosUnique1D(BenchmarkEnvironment):
 
 class MocadiSimulation(BenchmarkEnvironment):
     """
-    Camelback benchmark function.
+    Mocadi simulation interface.
     """
     def __init__(self, path=None):
         super().__init__(path)
+        self.config.dimension = 17
         ones = np.ones(self.config.dimension)
         self._x0 = 0.0*ones/np.sqrt(self.config.dimension) # initially all 0
         self._max_value = 1.0
         self._domain = ContinuousDomain(-ones, ones)
         # specify to the path where simulation located
-        self.mocadi = MocadiInterface('__environment', '../../../gicosy/T_Cource_Transmission/')
+        self.mocadi = MocadiInterface('__environment', 'gicosy/T_Cource_Transmission/') # base is the repository's home directory
 
     def f(self, X):
         X = np.atleast_2d(X)
         self.mocadi.RunMocadi(X)
-        Y = 2*np.sum(np.square(X), axis=1)
-        return (1 - Y)**2
+        # Y = 2*np.sum(np.square(X), axis=1)
+        Y = self.mocadi.LoadMocadiResults()
+        return 1 - (1 - Y)**2
 
 
 

@@ -5,6 +5,7 @@ from .Func_Edit_Files import Beam_proparty, Edit_gicosy_TCource, Edit_MatrixInit
 # import Ana_Root_Transmission
 import time
 import math
+import numpy as np
 
 
 # prepared to add path to the save path, but no longer needed
@@ -52,8 +53,8 @@ class ElectroMagnetConfig:
         self.BQ = None
         # Following factors are factors for normalized variation between (-1,1)
         tempBQ0 = self.BQ0
-        tempBQ0[4] = 0.1 # just to augment for multiplication factor
-        self.BQ0_factor = tempBQ * 0.2 # set to \pm 20%
+        tempBQ0[0][4] = 0.1 # just to augment for multiplication factor
+        self.BQ0_factor = tempBQ0 * 0.2 # set to \pm 20%
 
         self.setBQ(X)
 
@@ -64,7 +65,7 @@ class ElectroMagnetConfig:
         return self.BQ
 
     def getBQ(self):
-        if self.BQ == None or self.BQ.shape != self.BQ0.shape:
+        if (self.BQ == None).all() or (self.BQ.shape != self.BQ0.shape):
             sys.exit('BQ set error')
         return self.BQ.flatten()
 
@@ -167,7 +168,7 @@ def mocadi_func(*args):
     y_spot = 0
     
     #Edit_gicosy_TCource(Beam,args_sys[1],BQ,"./EBM-BigRIPS_org.dat",flag_track)
-    Edit_gicosy_TCource(Beam,args_sys[1],BQConfig.getBQ,"./EBM-BigRIPS_org.dat",flag_track)
+    Edit_gicosy_TCource(Beam,args_sys[1],BQConfig.getBQ(),"./EBM-BigRIPS_org.dat",flag_track)
     os.system('./gicosy.sh ./EBM-BigRIPS%s.dat > ./gicosy_output.txt'%(args_sys[1]))
     
     
@@ -220,4 +221,6 @@ if __name__ == '__main__':
     args_sys = sys.argv
 #    hoge = p_re(args_sys[2], './test') 
 #    print(hoge)
-    mocadi_func(args_sys[1:])
+    #mocadi_func(args_sys[1:])
+    X = np.atleast_2d(np.zeros(17))
+    mocadi_func('_hogehoge',X)

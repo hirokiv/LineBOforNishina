@@ -1,4 +1,4 @@
-    MOCADI 4.2 (PAW) Mon Oct 17 23:10:04 2022
+    MOCADI 4.2 (PAW) Tue Oct 18 23:18:07 2022
 
  
   **********************  beam  ************************
@@ -1308,29 +1308,29 @@
         ()
 
  primary beam
-   tr: particles  =       6533 wi: teilchen  =        6533.000
-      tr: opt    =     0.6533    tr: total =     0.6533
+   tr: particles  =       4554 wi: teilchen  =        4554.000
+      tr: opt    =     0.4554    tr: total =     0.4554
                        z   =       4256.5553cm
 
-     <     x     >=  1.835687e-03 cm     sigma     x     =  1.111481e-02 cm   
-   max     x      =  6.553922e-02 cm       min     x     = -3.986991e-02 cm   
+     <     x     >=  9.583584e-04 cm     sigma     x     =  6.210133e-02 cm   
+   max     x      =  1.401914e-01 cm       min     x     = -1.659654e-01 cm   
 
-     <     a     >= -4.048542e-03 mrad   sigma     a     =  2.438664e+00 mrad 
-   max     a      =  5.597596e+00 mrad     min     a     = -5.491035e+00 mrad 
+     <     a     >= -4.310037e-02 mrad   sigma     a     =  2.679304e+00 mrad 
+   max     a      =  5.558119e+00 mrad     min     a     = -5.290106e+00 mrad 
 
-     <     y     >=  4.474810e-05 cm     sigma     y     =  3.784051e-02 cm   
-   max     y      =  9.855255e-02 cm       min     y     = -1.009964e-01 cm   
+     <     y     >= -4.830967e-05 cm     sigma     y     =  1.695857e-02 cm   
+   max     y      =  6.082712e-02 cm       min     y     = -6.329733e-02 cm   
 
-     <     b     >=  1.138900e-02 mrad   sigma     b     =  3.724146e+00 mrad 
-   max     b      =  7.546152e+00 mrad     min     b     = -7.571970e+00 mrad 
+     <     b     >= -2.717988e-02 mrad   sigma     b     =  2.526852e+00 mrad 
+   max     b      =  6.150417e+00 mrad     min     b     = -6.412693e+00 mrad 
 
-     <  energy   >=  3.450098e+02 MeV/u  sigma  energy   =  6.833516e-01 MeV/u
-   max  energy    =  3.474236e+02 MeV/u    min  energy   =  3.425831e+02 MeV/u
+     <  energy   >=  3.450086e+02 MeV/u  sigma  energy   =  6.882967e-01 MeV/u
+   max  energy    =  3.474236e+02 MeV/u    min  energy   =  3.427269e+02 MeV/u
 
-     <   time    >=  2.076570e-01 mu s   sigma   time    =  1.225219e-04 mu s 
-   max   time     =  2.080782e-01 mu s     min   time    =  2.072190e-01 mu s 
+     <   time    >=  2.076571e-01 mu s   sigma   time    =  1.253632e-04 mu s 
+   max   time     =  2.080768e-01 mu s     min   time    =  2.072165e-01 mu s 
 
-     <  mass     >=  2.380040e+02  u     sigma  mass     =  1.191576e-04  u   
+     <  mass     >=  2.380040e+02  u     sigma  mass     =  7.011262e-05  u   
    max  mass      =  2.380040e+02  u       min  mass     =  2.380040e+02  u   
 
      <    z      >=  8.600000e+01        sigma    z      =  0.000000e+00      
@@ -1342,14 +1342,14 @@
      <  nf/nsf   >=  1.000000e+00        sigma  nf/nsf   =  0.000000e+00      
    max  nf/nsf    =  1.000000e+00          min  nf/nsf   =  1.000000e+00      
 
-     <  tof-tim  >=  2.076570e-01 mu s   sigma  tof-tim  =  1.225219e-04 mu s 
-   max  tof-tim   =  2.080782e-01 mu s     min  tof-tim  =  2.072190e-01 mu s 
+     <  tof-tim  >=  2.076571e-01 mu s   sigma  tof-tim  =  1.253632e-04 mu s 
+   max  tof-tim   =  2.080768e-01 mu s     min  tof-tim  =  2.072165e-01 mu s 
 
      <  delta e  >=  0.000000e+00 MeV    sigma  delta e  =  0.000000e+00 MeV  
    max  delta e   =  0.000000e+00 MeV      min  delta e  =  0.000000e+00 MeV  
 
-     <   brho    >=  8.057126e+00  Tm    sigma   brho    =  9.226170e-03  Tm  
-   max   brho     =  8.089682e+00  Tm      min   brho    =  8.024329e+00  Tm  
+     <   brho    >=  8.057109e+00  Tm    sigma   brho    =  9.292921e-03  Tm  
+   max   brho     =  8.089682e+00  Tm      min   brho    =  8.026274e+00  Tm  
   *****************************************************************
         used cpu  time :         0  sec
         execution time :         1  sec
