@@ -3,6 +3,7 @@ import time
 import gicosy.T_Cource_Transmission as TCT
 import numpy as np
 import sys
+import shutil
 
 
 class MocadiInterface:
@@ -30,9 +31,14 @@ class MocadiInterface:
             os.chdir(self.path2Mocadi)
             # delete existing path file and run Mocadi
             if os.path.isfile(self.filename):
-              os.remove(self.filename)
+              #os.remove(self.filename)
+              shutil.move(self.filename, self.filename + '_old.txt')
             
-            TCT.mocadi_func(self.identifier, X)
+
+            # while statement inserted because mocadi often fails 
+            # even for the same magnet value (X)
+            while not (os.path.isfile(self.filename)):
+                TCT.mocadi_func(self.identifier, X)
         
             # intended for asynchronous setting but seems not necessary
             # # check if the file in need is generated
@@ -47,6 +53,8 @@ class MocadiInterface:
     
         except:
             os.chdir(self.pathCurrent)
+            print('simulation_wrapper.py: Error occured. Refer X')
+            print(X)
             sys.exit('Error in generating simulation result')
 
         finally:

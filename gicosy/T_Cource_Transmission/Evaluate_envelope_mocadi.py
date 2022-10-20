@@ -53,8 +53,8 @@ class ElectroMagnetConfig:
         self.BQ = None
         # Following factors are factors for normalized variation between (-1,1)
         tempBQ0 = self.BQ0
-        tempBQ0[0][4] = 0.1 # just to augment for multiplication factor
-        self.BQ0_factor = tempBQ0 * 0.2 # set to \pm 20%
+        tempBQ0[0][4] = 0 # just to augment by multiplication factor
+        self.BQ0_factor = tempBQ0 * 0.4 # set to \pm 10%
 
         self.setBQ(X)
 
@@ -67,6 +67,12 @@ class ElectroMagnetConfig:
     def getBQ(self):
         if (self.BQ == None).all() or (self.BQ.shape != self.BQ0.shape):
             sys.exit('BQ set error')
+
+        print('#########################################################')
+        print('## Evaluate_Envelope_mocadi.py getBQ ##')
+        print(self.BQ.flatten())
+        print('#########################################################')
+
         return self.BQ.flatten()
 
 
@@ -166,9 +172,10 @@ def mocadi_func(*args):
     nelement = nelement_init
     x_spot = 0
     y_spot = 0
-    
+
+    BQ_file = np.round(BQConfig.getBQ(), 6).tolist()
     #Edit_gicosy_TCource(Beam,args_sys[1],BQ,"./EBM-BigRIPS_org.dat",flag_track)
-    Edit_gicosy_TCource(Beam,args_sys[1],BQConfig.getBQ(),"./EBM-BigRIPS_org.dat",flag_track)
+    Edit_gicosy_TCource(Beam,args_sys[1],BQ_file,"./EBM-BigRIPS_org.dat",flag_track)
     os.system('./gicosy.sh ./EBM-BigRIPS%s.dat > ./gicosy_output.txt'%(args_sys[1]))
     
     
@@ -201,13 +208,13 @@ def mocadi_func(*args):
     Edit_MatrixInit_EBM(Beam)
     
     filename_hbk, nelement = Edit_mocadi_TCource(args_sys[1],Beam,ndata,flag_calc_1st_order,dist_shape,duct_scale_factor)
-    os.system('mocadi-42e ./EBM-BigRIPS%s.in'%(args_sys[1]))
-    os.system('h2root ./ebm-bigrips%s.hbk'%(str.lower(args_sys[1])))
+    os.system('mocadi-42e ./EBM-BigRIPS%s.in > ./mocadi-42e_output.txt'%(args_sys[1]))
+    os.system('h2root ./ebm-bigrips%s.hbk    > ./h2root_output.txt'%(str.lower(args_sys[1])))
     os.system('mv ./ebm-bigrips%s.root ./EBM-BigRIPS%s.root'%(str.lower(args_sys[1]),args_sys[1]))
     #     print(filename_root)
     print("element number is ", nelement)
         
-    os.system('root \"./Ana_MOCADI_v2.C(\\\"./EBM-BigRIPS%s.root\\\",%d,\\\"%s\\\")\" -q -b'%(args_sys[1],nelement,args_sys[1]))
+    os.system('root \"./Ana_MOCADI_v2.C(\\\"./EBM-BigRIPS%s.root\\\",%d,\\\"%s\\\")\" -q -b > ./root_Ana_MOCADI_output.txt'%(args_sys[1],nelement,args_sys[1]))
     
     os.system('mv ./EBM-BigRIPS%s.root ./Root/EBM-BigRIPS%s_%dsample_%delement.root'%(args_sys[1],args_sys[1],ndata,nelement))
     os.system('mv ./*.eps ./figure/')

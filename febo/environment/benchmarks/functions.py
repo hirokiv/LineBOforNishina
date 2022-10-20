@@ -191,7 +191,7 @@ class MocadiSimulation(BenchmarkEnvironment):
     """
     def __init__(self, path=None):
         super().__init__(path)
-        self.config.dimension = 17
+        # self.config.dimension = 17 wrote in ymal
         ones = np.ones(self.config.dimension)
         self._x0 = 0.0*ones/np.sqrt(self.config.dimension) # initially all 0
         self._max_value = 1.0
@@ -203,8 +203,8 @@ class MocadiSimulation(BenchmarkEnvironment):
         X = np.atleast_2d(X)
         self.mocadi.RunMocadi(X)
         # Y = 2*np.sum(np.square(X), axis=1)
-        Y = self.mocadi.LoadMocadiResults()
-        return 1 - (1 - Y)**2
+        Y = self.mocadi.LoadMocadiResults() # Y \in [0,1]
+        return (Y - 1)**2
 
 
 

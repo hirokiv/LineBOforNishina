@@ -169,7 +169,7 @@ def Edit_MatrixInit_EBM(Beam):
 
         
 def Edit_mocadi_TCource(extra_name,Beam,ndata,flag_calc_1st_order,dist_shape = 2, duct_scale_factor = 1.0):
-    os.system('./gicosy2mocadif EBM-BIGRIPS%s_out.dat'%extra_name)
+    os.system('./gicosy2mocadif EBM-BIGRIPS%s_out.dat > ./gicosy2mocadif_output.txt'%extra_name)
     file_name_mocadi     = "GICOSYOUT.in"
     file_name_mocadi_out = "EBM-BigRIPS%s.in"%extra_name
     data_lines=None

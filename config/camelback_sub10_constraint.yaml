@@ -40,7 +40,7 @@ algorithm.safeopt:
 
 controller:
   best_predicted_every: 1
-  T: 500 # Horizon
+  T: 300 # Horizon
   repetitions: 2
 
 

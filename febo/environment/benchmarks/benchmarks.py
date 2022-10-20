@@ -92,9 +92,11 @@ class BenchmarkEnvironment(NoiseObsMixin, ConstraintsMixin, Environment):
 
         evaluation = np.empty(shape=(), dtype=self.dtype)
         evaluation['x'] = self._x
+        logger.info('benchmarks.py x per iteration x=' + str(self._x))
 
         evaluation['y_exact'] = np.asscalar(self.f(self._x))*self.config.scale + self.config.bias
         evaluation['y_max'] = self.max_value
+        logger.info('benchmarks.py y_exact per iteration yexact=' + str(evaluation['y_exact']))
 
         # if we use Gaussian Noise, we can query the std
         if isinstance(self._noise_function, GaussianNoiseFunction):

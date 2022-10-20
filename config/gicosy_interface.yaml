@@ -6,7 +6,6 @@ algorithm:
   model_config: {}
   model: febo.models.gp.GP
 
-
 model:
   beta: 2
 models.gp:
@@ -21,37 +20,38 @@ models.gp:
 
 algorithm.subdomainbo:
   min_queries_line: 10
-  max_queries_line: 30
+  max_queries_line: 15
   min_queries_tr: 2*d
   max_queries_tr: 2*d
   acquisition: febo.algorithms.subdomainbo.acquisition.ucb
-  plot_every_step: true
+  plot_every_step: false
   plot: true
 
-  # algorithm.rembo:
-  #   emb_d: 2
-  #   interleaved_runs: 4
+algorithm.rembo:
+  emb_d: 2
+  interleaved_runs: 4
 
-  # algorithm.nelder_mead:
-  #   contraction_factor: 0.3
+algorithm.nelder_mead:
+  contraction_factor: 0.3
 
 algorithm.safeopt:
   points_per_dimension: 50
-  ucb: true
+  ucb: false
 
 controller:
   best_predicted_every: 1
-  T: 200 # Horizon
-  repetitions: 3
+  T: 300 # Horizon
+  repetitions: 1
 
 
 environment.benchmark:
   noise_obs_mode: none  # Can be set to "full", "evaluation" or "hidden".
-  noise_function: 0.2
-  aug_d: 10
-  lower_bound_objective: 0.5
-  random_x0: False
-  random_x0_min_value: 0.2
+  noise_function: 0.05
+  aug_d: 0
+  lower_bound_objective: 0.4
+  random_x0: false
+  random_x0_min_value: 0.5
+  dimension: 17
 
 
 experiment.multi:
@@ -59,14 +59,14 @@ experiment.multi:
   multi_controller: febo.controller.multi.RepetitionController
   iterator:
 #  - experiment.simple:algorithm: febo.algorithms.SafeRandomLineBO
-  - experiment.simple:algorithm: febo.algorithms.SafeCoordinateLineBO
   - experiment.simple:algorithm: febo.algorithms.SafeAscentLineBO
+  - experiment.simple:algorithm: febo.algorithms.SafeCoordinateLineBO
 #  - experiment.simple:algorithm: febo.algorithms.safeopt.SwarmSafeOpt
-#  - experiment.simple:algorithm: febo.algorithms.safeopt.SafeOpt
   fixed_environment: false
 
 experiment.simple:
   algorithm: febo.algorithms.Random
+#  algorithm: febo.algorithms.UCB
   environment: febo.environment.benchmarks.functions.MocadiSimulation
   controller: febo.controller.simple.SimpleController
 
