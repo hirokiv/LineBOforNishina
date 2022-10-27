@@ -162,9 +162,9 @@ class SubDomainBO(ModelMixin, Algorithm):
         if len(self._line_data) <= self._min_queries_line:
             return False
 
-        # accuracy of maximum < 1%
-        if self._line_max_ucb() - self.model.lcb(self._best_x) < 0.01*self.model.mean(self._best_x):
-            logger.warning("Uncertainty at best_x reduced to 1%, stopping line.")
+        # accuracy of maximum < 2%
+        if self._line_max_ucb() - self.model.lcb(self._best_x) < 0.02*self.model.mean(self._best_x):
+            logger.warning("Uncertainty at best_x reduced to 2%, stopping line.")
             return True
 
         # best_x didn't change after half the samples

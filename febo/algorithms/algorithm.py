@@ -29,6 +29,7 @@ class Algorithm(Configurable):
         self.experiment_info = experiment_info
         self._dtype_fields = []
         self.name = type(self).__name__
+        self.__best_y = -10e10
 
     def initialize(self, **kwargs):
         """
@@ -56,7 +57,6 @@ class Algorithm(Configurable):
         self.noise_obs_mode = kwargs.get("noise_obs_mode", None)
 
         self.__best_x = None
-        self.__best_y = -10e10
 
     def _next(self, context=None):
         """

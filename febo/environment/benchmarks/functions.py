@@ -204,7 +204,7 @@ class MocadiSimulation(BenchmarkEnvironment):
         self.mocadi.RunMocadi(X)
         # Y = 2*np.sum(np.square(X), axis=1)
         Y = self.mocadi.LoadMocadiResults() # Y \in [0,1]
-        return (Y - 1)**2
+        return Y
 
 
 

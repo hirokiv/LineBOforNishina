@@ -54,7 +54,7 @@ class ElectroMagnetConfig:
         # Following factors are factors for normalized variation between (-1,1)
         tempBQ0 = self.BQ0
         tempBQ0[0][4] = 0 # just to augment by multiplication factor
-        self.BQ0_factor = tempBQ0 * 0.4 # set to \pm 10%
+        self.BQ0_factor = tempBQ0 * 1.0 # set to \pm 10%
 
         self.setBQ(X)
 
