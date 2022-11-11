@@ -101,7 +101,7 @@ F D;
 OBJF0=0;
 OBJT11=0;
 ;--- SRC-BTline ---
-Goto Subroutine SRCMAT;
+;Goto Subroutine SRCMAT;
 ;Goto Subroutine SRCMATsuzuki;
 Goto Subroutine SRCT11;
 Goto Subroutine T11F0;

@@ -25,5 +25,7 @@ main:
   - febo.solvers.ScipySolver
   - febo.models.gp.GP
   - febo.solvers.ScipySolver
+  - gicosy.MocadiInterface
+  - gicosy.ElectroMagnetClass
   experiment: febo.experiment.simple.SimpleExperiment  # Experiment
   experiment_dir: runs/

@@ -3,7 +3,7 @@ from .benchmarks import BenchmarkEnvironment, BenchmarkEnvironmentConfig
 import numpy as np
 from febo.environment.domain import DiscreteDomain, ContinuousDomain
 from gicosy.simulation_wrapper import MocadiInterface
-from gicosy.ElectroMagnetConfig import ElectroMagnetConfig
+from gicosy.ElectroMagnetClass import ElectroMagnetClass
 
 
 
@@ -197,7 +197,7 @@ class MocadiSimulation(BenchmarkEnvironment):
         self._domain = ContinuousDomain(-ones, ones)
 
         # determine x0 based on the initial value of BQ 
-        self.emconfig = ElectroMagnetConfig() 
+        self.emconfig = ElectroMagnetClass() 
         #self._x0 = 0.0*ones/np.sqrt(self.config.dimension) # initially all 0
         self._x0 = self.emconfig.getX0().flatten() # relative to the domain range
         self._x = self._x0

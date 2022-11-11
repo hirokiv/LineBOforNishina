@@ -84,6 +84,11 @@ environment.benchmark:
   - gicosy.simulation_wrapper.MocadiConstraint29
   - gicosy.simulation_wrapper.MocadiConstraint30
 
+simulation_wrapper:
+  ratio_constraints: 0.05
+
+emsetup:
+  multiple_factor: 1.5
 
 experiment.multi:
   label: febo.labels.algorithm_name

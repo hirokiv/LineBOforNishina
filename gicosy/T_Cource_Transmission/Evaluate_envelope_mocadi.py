@@ -53,17 +53,28 @@ def mocadi_func(*args):
     
     # monochromatic beam parameter at EBM (1 sigma)
     
-    emittance_h = 0.25
-    beta_h      = 1.0
-    alpha_h     = 0.5
+    emittance_h = 1.13
+    beta_h      = 13.22
+    alpha_h     = 1.17
     gamma_h     = (1 + alpha_h * alpha_h)/beta_h
     
-    emittance_v = 0.5
-    beta_v      = 2.0
-    alpha_v     = -0.5
+    emittance_v = 1.32
+    beta_v      = 9.46
+    alpha_v     = 0.26
     gamma_v     = (1 + alpha_v * alpha_v)/beta_v
     
-    sigP=0.1 # parcent
+    sigP=0.03 # parcent
+    # emittance_h = 0.25
+    # beta_h      = 1.0
+    # alpha_h     = 0.5
+    # gamma_h     = (1 + alpha_h * alpha_h)/beta_h
+    # 
+    # emittance_v = 0.5
+    # beta_v      = 2.0
+    # alpha_v     = -0.5
+    # gamma_v     = (1 + alpha_v * alpha_v)/beta_v
+    # 
+    # sigP=0.1 # parcent
     
     sigXmm  =       math.sqrt(beta_h  * emittance_h)
     sigAmrad=	math.sqrt(gamma_h * emittance_h)
