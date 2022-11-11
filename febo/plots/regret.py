@@ -86,3 +86,26 @@ class InferenceRegret(Regret):
 
     def _get_value(self, row, t):
         return self._to_regret(row[self._y_field], row)
+
+class ConstraintsHistory(Regret):
+    """
+    Plot Constraint closest to the maximum
+    """
+
+    def __init__(self, experiment):
+        super().__init__(experiment)
+        self._title = 'Constraints History'
+
+    def _init_dset(self, dset):
+        super()._init_dset(dset)
+        if "s" in dset.dtype.fields:
+            self._y_field = "s"
+        elif "s_bp" in dset.dtype.fields:
+            self._y_field = "s_bp"
+        else:
+            logger.warning(f"No field for best_predicted found. Fall back to {self._y_field}.")
+
+
+    def _get_value(self, row, t):
+        # return self._to_regret(row[self._y_field], row)
+        return row[self._y_field]

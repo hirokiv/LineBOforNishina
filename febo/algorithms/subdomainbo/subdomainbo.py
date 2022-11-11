@@ -307,8 +307,8 @@ class SubDomainBO(ModelMixin, Algorithm):
         # if self.config.tr_method == 'grad':
         #     direction = mean_grad_gp(self.model, self._tr_domain.x0, self._tr_domain.radius, 0.001)
 
-        # if change is less  than 2% of tr-radius or increase is less then 0.5%, pick a random direction
-        if np.linalg.norm(direction/self._tr_domain.radius) < 0.02:
+        # if change is less  than 1% of tr-radius or increase is less then 0.5%, pick a random direction
+        if np.linalg.norm(direction/self._tr_domain.radius) < 0.01:
             logger.warning('change in best_x < 2% of trust-region, picking random direction.')
             direction = self.get_random_direction()
         else:

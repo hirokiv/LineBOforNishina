@@ -3,6 +3,7 @@ from .benchmarks import BenchmarkEnvironment, BenchmarkEnvironmentConfig
 import numpy as np
 from febo.environment.domain import DiscreteDomain, ContinuousDomain
 from gicosy.simulation_wrapper import MocadiInterface
+from gicosy.ElectroMagnetConfig import ElectroMagnetConfig
 
 
 
@@ -193,11 +194,16 @@ class MocadiSimulation(BenchmarkEnvironment):
         super().__init__(path)
         # self.config.dimension = 17 wrote in ymal
         ones = np.ones(self.config.dimension)
-        self._x0 = 0.0*ones/np.sqrt(self.config.dimension) # initially all 0
-        self._max_value = 1.0
         self._domain = ContinuousDomain(-ones, ones)
+
+        # determine x0 based on the initial value of BQ 
+        self.emconfig = ElectroMagnetConfig() 
+        #self._x0 = 0.0*ones/np.sqrt(self.config.dimension) # initially all 0
+        self._x0 = self.emconfig.getX0().flatten() # relative to the domain range
+        self._x = self._x0
+        self._max_value = 1.0
         # specify to the path where simulation located
-        self.mocadi = MocadiInterface('__environment', 'gicosy/T_Cource_Transmission/') # base is the repository's home directory
+        self.mocadi = MocadiInterface('__environment', 'gicosy/T_Cource_Transmission/', self.emconfig) # base is the repository's home directory
 
     def f(self, X):
         X = np.atleast_2d(X)
@@ -206,8 +212,20 @@ class MocadiSimulation(BenchmarkEnvironment):
         Y = self.mocadi.LoadMocadiResults() # Y \in [0,1]
         return Y
 
-
-
+#    def _s(self):
+#        # constrained returned as the 
+#        # the function should return set of observables
+#
+#        def make_s(idx):
+#            # should return function to take only 1 argument
+#            def s(X, idx=idx):
+#                # X in original code is ineffective as the load results alredy loaded in .lost
+#                return self.mocadi.lost[idx] - self.mocadi.damage_threshold[idx]
+#
+#            return s
+#
+#        return [i for i in map(make_s, range(len(self.mocadi.lost)))]
+#
 #
 # class DSafetyConstraintsEnv(BenchmarkEnvironment):
 #     """ implements a _get_saftey_constraint methods, which returns self.domain_dimension safety constraints. """

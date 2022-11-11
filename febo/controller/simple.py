@@ -175,7 +175,7 @@ class SimpleController(Controller):
         #     self.algorithm.optimize_model()
 
         logger.debug(f"Objective value {evaluation.y}.")
-        # logger.info(f"safety constraints {evaluation.s}")
+        logger.info(f"safety constraints {evaluation.s}")
         logger.debug(f"Completed step {self.t}.")
 
         return evaluation

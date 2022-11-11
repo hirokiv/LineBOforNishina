@@ -125,8 +125,8 @@ class DataPlot(Plot):
                     values.append([])
                 values[t].append(value)
 
-        avg_values = [np.mean(row) for row in values] # need to do this row-wise because rows might have different lengths
-        sterr = [stats.sem(row) for row in values]
+        avg_values = [np.mean(row, axis=0) for row in values] # need to do this row-wise because rows might have different lengths
+        sterr = [stats.sem(row, axis=0) for row in values]
 
         T = len(avg_values)
 
@@ -134,7 +134,15 @@ class DataPlot(Plot):
         linestyle = '-'
         if self._plot_counter > 9:
             linestyle = '--'
-        axis.errorbar(range(T), avg_values, yerr=sterr, label=label, errorevery=max(1,T//20), linestyle=linestyle)
+
+        m, n = np.shape(avg_values)
+        if n == 1:
+            axis.errorbar(range(T), avg_values, yerr=sterr, label=label, errorevery=max(1,T//20), linestyle=linestyle)
+        else:
+            for idx in range(n):
+                avg_values = np.array(avg_values)
+                sterr = np.array(sterr)
+                axis.errorbar(range(T), avg_values[:,idx], yerr=sterr[:,idx], label=label, errorevery=max(1,T//20), linestyle=linestyle)
         self._plot_counter += 1
 
     def _init_dset(self, dset):
