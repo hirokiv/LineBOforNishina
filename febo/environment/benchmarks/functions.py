@@ -212,6 +212,8 @@ class MocadiSimulation(BenchmarkEnvironment):
         Y = self.mocadi.LoadMocadiResults() # Y \in [0,1]
         return Y
 
+
+
 #    def _s(self):
 #        # constrained returned as the 
 #        # the function should return set of observables

@@ -5,7 +5,7 @@ from febo.environment.domain import ContinuousDomain
 
 class TrustRegionDomain(DiscreteDomain):
 
-    def __init__(self, domain, x0, radius, num_random_points=500, num_axis_points=10):
+    def __init__(self, domain, x0, radius, num_random_points=500, num_axis_points=6):
         self._domain = domain
         self.x0 = x0
         self.radius = radius

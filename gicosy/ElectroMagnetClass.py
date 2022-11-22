@@ -3,26 +3,33 @@ import time
 import numpy as np
 import sys
 import shutil
+from enum import Enum
 from febo.utils import get_logger
 
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
-from febo.utils.config import ConfigField, Config, Configurable, assign_config
+from febo.utils.config import ClassListConfigField, ConfigField, Config, Configurable, assign_config, EnumConfigField
 
 
 logger = get_logger("emconfig")
 
-# initial BQ values (hard-coded)
+class BQSetMode(Enum):
+    multiplication = 1
+    hardcode = 2
+    scalar = 3
 
+# contains default value which is manageable by gicosy_interface.yaml
 class EMConfig(Config):
-    multiple_factor = ConfigField(1.5)
-    _section = 'emsetup'
-
-
-@assign_config(EMConfig)
-class ElectroMagnetClass(Configurable):
-    def __init__(self):
-        self.BQ0 = np.atleast_2d([
+    # initial BQ values (hard-coded)
+    polarity = [
+           -1,-1,+1,+1,
+            -1,-1,+1,
+            +1,-1,
+            -1,+1,
+            -1,+1,-1,
+            +1,-1,+1
+        ]
+    BQ0temp =[
             0.000,
             -0.313,
             0.206,
@@ -39,35 +46,26 @@ class ElectroMagnetClass(Configurable):
             -0.026,
             0.537,
             -0.626,
-            0.906
-            # -3.58757E-01,
-            # -8.50502E-03,
-            # 0.180925008,
-            # 0.265975226,
-            # -0.0,
-            # -0.00136544,
-            # 0.044999297,
-            # 0.364942752,
-            # -0.42834382,
-            # -0.4391684,
-            # 0.34020087,
-            # -0.29690258,
-            # 0.53968229,
-            # -0.25515065,
-            # 0.740710077,
-            # -0.6154543,
-            # 0.511847673    
-        ]) # initialize as 2d array
+            0.906] 
+    BQ0 = ConfigField(BQ0temp, field_type = list, allow_none = False)
+    # field for multiplication mode
+    multiple_factor = ConfigField(1.5)
+    # fields for hard code mode
+    em_scalar = ConfigField(0.2)
+    BQ_max = ConfigField( np.array(BQ0temp) , field_type = list, allow_none = False)
+    BQ_min = ConfigField( np.array(BQ0temp) , field_type = list, allow_none = False)
+    # switch BQ max and min set mode
+    BQSETMODE = EnumConfigField('multiplication', enum_cls=BQSetMode, comment='Can be set to "multiplication", "hardcode", or "scalar".')
+    _section = 'emsetup'
+
+
+@assign_config(EMConfig)
+class ElectroMagnetClass(Configurable):
+    def __init__(self):
+        self.BQ0 = np.atleast_2d( self.config.BQ0 ) # initialize as 2d array
     
         # note for later restricting the input value
-        self.polarity = np.atleast_2d([
-           -1,-1,+1,+1,
-            -1,-1,+1,
-            +1,-1,
-            -1,+1,
-            -1,+1,-1,
-            +1,-1,+1
-        ])
+        self.polarity = np.atleast_2d(self.config.polarity)
 
         # Following factors are factors for normalized variation between (-1,1)
         #tempBQ0 = self.BQ0
@@ -83,31 +81,37 @@ class ElectroMagnetClass(Configurable):
         # convert BQ0 to X based on max and min range
         self.X0 = (self.BQ0 - self.BQave) / (self.BQ_factor + 1e-20) # avoid 0 division
         logger.info('###############################')
-        logger.info('show X0')
-        logger.info('###############################')
+        logger.info('##  show X0                  ##')
         logger.info(self.X0)
-        # print(self.BQ0)
-        # print(self.BQave)
-        # print(self.BQ_factor)
 
     def getX0(self):
         return self.X0
 
     def setBQRange(self):
-        # temporaly based on polarity and 1 maximum
-        BQ0_multiplied = np.abs(self.BQ0 * self.config.multiple_factor) # allow 4 times multiple for each
-        self.BQmax = BQ0_multiplied * (np.atleast_2d([0 if i<0 else i for i in self.polarity.flatten()]))
-        self.BQmin = BQ0_multiplied * (np.atleast_2d([0 if i>0 else i for i in self.polarity.flatten()]))
+        if self.config.BQSETMODE.name == 'multiplication':
+            # Set BQ based on polarity and multiplied maximum
+            BQ0_multiplied = np.abs(self.BQ0 * self.config.multiple_factor) # allow 4 times multiple for each
+            self.BQmax = BQ0_multiplied * (np.atleast_2d([0 if i<0 else i for i in self.polarity.flatten()]))
+            self.BQmin = BQ0_multiplied * (np.atleast_2d([0 if i>0 else i for i in self.polarity.flatten()]))
+        elif self.config.BQSETMODE.name == 'hardcode':
+            # Hard code max and min value
+            self.BQmax = np.atleast_2d(self.config.BQ_max)
+            self.BQmin = np.atleast_2d(self.config.BQ_min)
+        elif self.config.BQSETMODE.name == 'scalar':
+            # add or subtract scalar value from the entire matrix
+            self.BQmax = np.array(self.config.BQ0) + self.config.em_scalar
+            self.BQmin = np.array(self.config.BQ0) - self.config.em_scalar
+
+
         self.BQave = (self.BQmax + self.BQmin) / 2.
         self.BQ_factor = self.BQmax - self.BQave
-        logger.info('###############################')
-        logger.info('setBQRange called')
-        logger.info('show max, min, ave, BQ_factor')
-        logger.info('###############################')
+        logger.info('###################################')
+        logger.info('## setBQRange called             ##')
+        logger.info('## show max, min, ##')
         logger.info(self.BQmax)
         logger.info(self.BQmin)
-        logger.info(self.BQave)
-        logger.info(self.BQ_factor)
+        #logger.info(self.BQave)
+        #logger.info(self.BQ_factor)
 
     def setBQ(self, X):
         # set BQ based on X each dimension normalized by BQmax and BQmin.

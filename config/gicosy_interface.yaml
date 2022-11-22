@@ -23,6 +23,7 @@ algorithm.subdomainbo:
   max_queries_line: 40
   min_queries_tr: 2*d
   max_queries_tr: 2*d
+  tr_radius: 0.2
   acquisition: febo.algorithms.subdomainbo.acquisition.ucb
   plot_every_step: false
   plot: true
@@ -40,7 +41,7 @@ algorithm.safeopt:
 
 controller:
   best_predicted_every: 1
-  T: 100 # Horizon
+  T: 300 # Horizon
   repetitions: 1
 
 
@@ -51,7 +52,7 @@ environment.benchmark:
   lower_bound_objective: 0.4
   random_x0: false
   random_x0_min_value: 0.5
-  dimension: 17
+  dimension: 17 # number of dimensions to be manipulated
   constraints: 
   - gicosy.simulation_wrapper.MocadiConstraint1
   - gicosy.simulation_wrapper.MocadiConstraint2
@@ -85,16 +86,26 @@ environment.benchmark:
   - gicosy.simulation_wrapper.MocadiConstraint30
 
 simulation_wrapper:
-  ratio_constraints: 0.05
+  ratio_constraints: 0.02
 
+# initial magnetic field condition here
 emsetup:
-  multiple_factor: 1.5
+  # BQSETMODE: scalar # swtich between "multiplication", "hardcode", and "scalar"
+  BQSETMODE: hardcode # swtich between "multiplication", "hardcode", and "scalar"
+  BQ0: [0.000, -0.313, 0.206, 0.195, -0.207, 0.000, 0.195, 0.198, -0.190, -0.287, 0.332, -0.695, 0.622, -0.026, 0.537, -0.626, 0.906]
+  # multiplication mode
+  multiple_factor: 1.5 
+  # hardcode mode initial BQ value
+  BQ_max: [0.100, -0.313, 0.206, 0.195, -0.207, 0.000, 0.195, 0.198, -0.190, -0.287, 0.332, -0.695, 0.622, -0.026, 0.537, -0.626, 0.906]
+  BQ_min: [-0.100, -0.313, 0.206, 0.195, -0.207, 0.000, 0.195, 0.198, -0.190, -0.287, 0.332, -0.695, 0.622, -0.026, 0.537, -0.626, 0.906]
+  # add or subtract scalar
+  em_scalar: 1.0
 
 experiment.multi:
   label: febo.labels.algorithm_name
   multi_controller: febo.controller.multi.RepetitionController
   iterator:
-#  - experiment.simple:algorithm: febo.algorithms.NelderMead
+  - experiment.simple:algorithm: febo.algorithms.NelderMead
 #  - experiment.simple:algorithm: febo.algorithms.SafeRandomLineBO
   - experiment.simple:algorithm: febo.algorithms.SafeAscentLineBO
 #  - experiment.simple:algorithm: febo.algorithms.SafeCoordinateLineBO

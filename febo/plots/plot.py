@@ -135,11 +135,11 @@ class DataPlot(Plot):
         if self._plot_counter > 9:
             linestyle = '--'
 
-        m, n = np.shape(avg_values)
-        if n == 1:
+        m = np.shape(avg_values)
+        if len(m) == 1:
             axis.errorbar(range(T), avg_values, yerr=sterr, label=label, errorevery=max(1,T//20), linestyle=linestyle)
-        else:
-            for idx in range(n):
+        elif m[1]>1:
+            for idx in range(m[1]):
                 avg_values = np.array(avg_values)
                 sterr = np.array(sterr)
                 axis.errorbar(range(T), avg_values[:,idx], yerr=sterr[:,idx], label=label, errorevery=max(1,T//20), linestyle=linestyle)
