@@ -1,0 +1,135 @@
+algorithm:
+  noise_model_config: {}
+  noise_model:
+  constraints_model_config: {}
+  constraints_model: febo.models.gp.GP
+  model_config: {}
+  model: febo.models.gp.GP
+algorithm.nelder_mead:
+  contraction_factor: 0.1
+algorithm.rembo:
+  interleaved_runs: 4
+  emb_d: 0  # subspace dimension
+algorithm.safeopt:
+  points_per_dimension: 100
+  ucb: false
+algorithm.subdomainbo:
+  acquisition: febo.algorithms.subdomainbo.acquisition.ucb
+  plot_every_step: false
+  plot: true
+  max_queries_tr: 2*d
+  min_queries_tr: 2*d
+  max_queries_line: 40
+  min_queries_line: 10
+controller:
+  best_predicted_every: 1  # Do .best_predict() on every n-th timestep, if set to 0, don't evaluate .best_predict()
+  T: 300  # Horizon
+  repetitions: 1  # Number of repetitions each experiment is run.
+emsetup:
+  multiple_factor: 1.5
+environment.benchmark:
+  aug_d: 0
+  random_x0_min_value: 0.5
+  random_x0: false
+  dimension: 17
+  noise_obs_mode: none  # Can be set to "full", "evaluation" or "hidden".
+  noise_function: 0.01
+  lower_bound_objective: 0.4
+  constraints:
+  - gicosy.simulation_wrapper.MocadiConstraint1
+  - gicosy.simulation_wrapper.MocadiConstraint2
+  - gicosy.simulation_wrapper.MocadiConstraint3
+  - gicosy.simulation_wrapper.MocadiConstraint4
+  - gicosy.simulation_wrapper.MocadiConstraint5
+  - gicosy.simulation_wrapper.MocadiConstraint6
+  - gicosy.simulation_wrapper.MocadiConstraint7
+  - gicosy.simulation_wrapper.MocadiConstraint8
+  - gicosy.simulation_wrapper.MocadiConstraint9
+  - gicosy.simulation_wrapper.MocadiConstraint10
+  - gicosy.simulation_wrapper.MocadiConstraint11
+  - gicosy.simulation_wrapper.MocadiConstraint12
+  - gicosy.simulation_wrapper.MocadiConstraint13
+  - gicosy.simulation_wrapper.MocadiConstraint14
+  - gicosy.simulation_wrapper.MocadiConstraint15
+  - gicosy.simulation_wrapper.MocadiConstraint16
+  - gicosy.simulation_wrapper.MocadiConstraint17
+  - gicosy.simulation_wrapper.MocadiConstraint18
+  - gicosy.simulation_wrapper.MocadiConstraint19
+  - gicosy.simulation_wrapper.MocadiConstraint20
+  - gicosy.simulation_wrapper.MocadiConstraint21
+  - gicosy.simulation_wrapper.MocadiConstraint22
+  - gicosy.simulation_wrapper.MocadiConstraint23
+  - gicosy.simulation_wrapper.MocadiConstraint24
+  - gicosy.simulation_wrapper.MocadiConstraint25
+  - gicosy.simulation_wrapper.MocadiConstraint26
+  - gicosy.simulation_wrapper.MocadiConstraint27
+  - gicosy.simulation_wrapper.MocadiConstraint28
+  - gicosy.simulation_wrapper.MocadiConstraint29
+  - gicosy.simulation_wrapper.MocadiConstraint30
+experiment.multi:
+  label: febo.labels.algorithm_name
+  multi_controller: febo.controller.multi.RepetitionController
+  iterator:
+#  - experiment.simple:algorithm: febo.algorithms.NelderMead
+#  - experiment.simple:algorithm: febo.algorithms.SafeRandomLineBO
+  - experiment.simple:algorithm: febo.algorithms.SafeAscentLineBO
+  - experiment.simple:algorithm: febo.algorithms.SafeCoordinateLineBO
+#  - experiment.simple:algorithm: febo.algorithms.UCB # just for reference
+#  - experiment.simple:algorithm: febo.algorithms.safeopt.SwarmSafeOpt
+  fixed_environment: false  # If true, only one environment for the whole batch will be created. Use this, if you randomly genrate your environment, but the whole batch should use the same random instance of the environment.
+experiment.simple:
+  algorithm: febo.algorithms.Random
+  environment: febo.environment.benchmarks.functions.MocadiSimulation
+  controller: febo.controller.simple.SimpleController
+main:
+  experiment_dir: runs/
+  log_level_file: INFO
+  log_level_console: INFO
+  modules:
+  - febo.experiment.MultiExperiment
+  - febo.experiment.SimpleExperiment
+  - febo.controller.SequentialController
+  - febo.controller.RepetitionController
+  - febo.controller.SimpleController
+  - febo.controller.PlottingController
+  - febo.algorithms.UCB
+  - febo.algorithms.Algorithm
+  - febo.algorithms.rembo.Rembo
+  - febo.algorithms.rembo.InterleavedRembo
+  - febo.algorithms.spsa.SPSA
+  - febo.algorithms.cmaes.CMAES
+  - febo.algorithms.safeopt.SafeOpt
+  - febo.algorithms.subdomainbo.SubDomainBO
+  - febo.algorithms.subdomainbo.safeopt.SafeOptConfigMixin
+  - febo.algorithms.NelderMead
+  - febo.environment.benchmarks.BenchmarkEnvironment
+  - febo.environment.benchmarks.functions.Gaussian
+  - febo.environment.benchmarks.subspace.AugmentedDimensionMixinConfig
+  - febo.solvers.GridSolver
+  - febo.solvers.ScipySolver
+  - febo.models.gp.GP
+  - febo.solvers.ScipySolver
+  - gicosy.MocadiInterface
+  - gicosy.ElectroMagnetClass
+  experiment: febo.experiment.MultiExperiment  # Experiment
+model:
+  beta: 2
+models.gp:
+  calculate_gradients: true  # Enable/Disable computation of gradient on each update.
+  noise_var: 0.01
+  kernels:
+  - - GPy.kern.RBF
+    - variance: 1.0
+      lengthscale: 0.2
+      ARD: false
+simulation_wrapper:
+  ratio_constraints: 0.02
+solver.grid:
+  points_per_dimension: 300
+solver.scipy:
+  convergence_warnings: true
+  sync_restarts: true
+  num_processes: 1
+  num_restart: 50
+  lbfgs_maxfun: 1000
+  lbfgs_use_gradients: false
