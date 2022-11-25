@@ -34,7 +34,7 @@ To run the canonical problems, replace "{experiment_name}" in the instructions b
 * hartmann6_constraint
 * camelback_sub10_constraint
 
-<span style="color: red; "> Note: currently only ones with constraints available due to the addition of multiple constraints.</span>
+<span style="color: red; ">  Note: currently only ones with constraints available due to the addition of multiple constraints.</span>
 
 
 Instructions to run experiments and create plots:
@@ -48,21 +48,38 @@ where use your own choice of name for {user_specified_experiment_name}.
 Experimental results will be generated under `runs/{user_specified_experiment_name}`. 
 
 ***
+
 ***
 
-# Run for Mocadi simulation
+# Interfacing Safe LineBO with Mocadi simulation 
 
-For trying out safety-aware LineBO, opt for the `config/gicosy_interface.yaml` as the template YAML file. 
-Two major source codes are newly introduced to wrap the simulation under `gicosy/` directory.
+
+## Quick instruction to run the algorithm on Mocadi
+
+The template YAML file `config/gicosy_interface.yaml` specifies `febo.environment.benchmarks.functions.MocadiSimulation` 
+as the benchmark environment to extract objective function. The function interfaces
+You can execute Ascent-SafeLineBO and Coordinate-SafeLineBO by the same procedure as before.
+
+```
+1. febo create {user_specified_experiment_name} --config config/gicosy_interface.yaml
+2. febo run {user_specified_experiment_name}
+3. febo plot {user_specified_experiment_name} --plots febo.plots.InferenceRegret
+4. febo plot {user_specified_experiment_name} --plots febo.plots.ConstraintsHistory
+```
+
+For implementing the interface for Mocadi, 
+two major source codes are newly introduced to wrap the mocadi simulation under `gicosy/` directory.
 
 * gicosy/simulation_wrapper.py 
 * gicosy/ElectroMagnetClass.py 
 
+Mocadi simulation code is located under
+* gicosy/T_Course_Transmission
 
 
 ## Template System description
 
-The default system is composed of Quadrupole inputs $X \in \mathbb{R}^{17}$, and transmission ratio 
+The default system for trying out LineBO is the BigRIPS beam line, composed of Quadrupole inputs $X \in \mathbb{R}^{17}$, and transmission ratio 
 $y=(\mathrm {Transmitted\ particles })/(\mathrm{Total \ particles})$, and 30+1 constraints (30 read from the output table, and one as the lower bound of the transmisstion ratio).
 These values are computed or just fetched from the ouput result of Mocadi. 
 
@@ -81,17 +98,10 @@ The last line represents for the properties of the beam distribution;
 σx_in, σa_in, σy_in, σb_in, σδ, σx_fp, σy_fp, the number of total particles and the number of transmitted particles. 
 
 
-<!-- 
-    Tコースはdipoleが3つあるので、その前後でのロスをカウントしています。
-それぞれの位置での L, R, U, D でのロスの粒子数と、最後の数字はその和です。
-最後の一行は、
-σx_in, σa_in, σy_in, σb_in, σδ, σx_fp, σy_fp, 入射粒子数、通過粒子数
-になっています。
--->
-
 
 ## Objective Function
-The template YAML file `config/gicosy_interface.yaml` specifies `febo.environment.benchmarks.functions.MocadiSimulation` as the benchmark environment to extract objective function. 
+
+
 The implementation of this class is under `febo/environment/benchmarks/functions.py`, 
 
 ```python
@@ -196,7 +206,7 @@ environment.benchmark:
 ***
 # Example Output
 
-One example ouput is prepared under `runs/gicosy_develop_example`.
+One sample ouput is prepared under `runs/gicosy_develop_example`.
 
 ## Example of LineBO with multiple constraints output
 
@@ -210,18 +220,25 @@ The following figure will be automatically generated under
 
 
 
-![Test Image 1](image/Sample_Iteration_2.png)
+![Test Image 2](image/Sample_Iteration_2.png)
+
+
+![Test Image 3](image/inference_regret-all.png)
+![Test Image 4](image/constraints_history-all.png)
+
 
 
 
 # Editor information 
 This documentation and extensions are prepared by 
 H. Fujii, 
-an alumni of *Beam Dynamics and diagnostics team led by N. Fukunisi at Riken Nishina Center.*
+ *Beam Dynamics and diagnostics team led by N. Fukunisi at Riken Nishina Center.*
 
 Also affiliated with *Dynamics & Control Laboratory led by M. Yamakita at Tokyo Tech.*
 
 
  Email: fujii@ac.ctrl.titech.ac.jp / hirokifujii9@gmail.com
 
- Root and Mocadi environment prepared by T. Nishi
+
+
+ Root and Mocadi environment prepared by T. Nishi, Beam Dynamics and diagnostis at Riken Nishina Center.
