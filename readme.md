@@ -48,8 +48,25 @@ where use your own choice of name for {user_specified_experiment_name}.
 Experimental results will be generated under `runs/{user_specified_experiment_name}`. 
 
 ***
+# Mocadi Simulation environment setup
+Working `mocadi` environment and `root (6.24 preferred)` is required for generating the simulation output.
 
-***
+Given you installed these under `~/root/`, `mocadi/` and libralies under `~/lib/`, an example setup of your ~/.bashrc is as follows. 
+```
+export ROOTSYS=/home/[user]/root
+source $ROOTSYS/bin/thisroot.sh
+export PATH=$PATH:$ROOTSYS/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOTSYS/lib
+export PYTHONPATH=$ROOTSYS/lib/:$PYTHONPATH
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/lib/
+export MOCADI_DIR='/home/[user]/mocadi/'
+export MOCADI_DATA='/home/[user]/mocadi/data'
+export MOCADI_SPLINES_GZ='/home/[user]/mocadi/splines_gz'
+export PATH=$PATH:$MOCADI_DIR
+```
+RNC users are encouraged to talk to Dr. T. Nishi for the mocadi simulation environment. 
+
 
 # Interfacing Safe LineBO with Mocadi simulation 
 
