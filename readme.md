@@ -93,7 +93,7 @@ Dipole#2  in:     0,     0,     0,     0,     0
 Dipole#2 out:     0,     0,     0,     0,     0
 3.707068, 0.451586, 3.474535, 0.383571, 0.034785,  3.595134, 5.482656, 10000, 8219
 ```
-The number of lost particles at each monitor is exported in $5\times6$ matrix, where each column counts the loss at left, right, up and down position.
+The number of lost particles at each monitor is exported in $5\times6$ matrix, where each column counts the loss at left, right, up,  down position, and the sum of these four monitors.
 The last line represents for the properties of the beam distribution;
 σx_in, σa_in, σy_in, σb_in, σδ, σx_fp, σy_fp, the number of total particles and the number of transmitted particles. 
 
@@ -136,6 +136,7 @@ which reads out the numerical evaluation of the system via Mocadi simulation wra
 The function `f(self, X)` is to be ***maximized*** in thie context, which is the transmission ratio of the beamline.
 
 
+## Magnetic field configuration
 In this class, initial state values `BQ0` specified in YAML file is normalized to be casted on $x_i \in [-1,1] \ (i \in R)$, through the class under `gicosy/ElectroMagnetClass.py`. 
 The maximum and minimum values can be specified in YAML input deck in 3 ways by changing BQSETMODE configuration. 
 The corresponding part in `config/gicosy_interface.yaml` are as follows. 
@@ -210,7 +211,7 @@ One sample ouput is prepared under `runs/gicosy_develop_example`.
 
 ## Example of LineBO with multiple constraints output
 
-The following figure will be automatically generated under 
+The following figure will be automatically generated under runs/{user_specified_experiment_name}/plots/[Algorithm number]/[Iteration number]/*.pdf
 
 
 
