@@ -237,7 +237,7 @@ H. Fujii,
 Also affiliated with *Dynamics & Control Laboratory led by M. Yamakita at Tokyo Tech.*
 
 
- Email: fujii@ac.ctrl.titech.ac.jp / hirokifujii9@gmail.com
+ Email: fujii $at$ ac.ctrl.titech.ac.jp / hirokifujii9 $at$ gmail.com
 
 
 
